@@ -16,10 +16,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2056
     y: 51
-    width: 1430
+    width: 1293
     height: 829
   m_ShowMode: 4
-  m_Title: Console
+  m_Title: Test Runner
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -43,12 +43,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 1430
+    width: 1293
     height: 779
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 37
+  controlID: 48
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -64,12 +64,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 934
+    x: 691
     y: 0
-    width: 496
+    width: 602
     height: 779
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 15}
@@ -93,10 +93,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 226
+    width: 168
     height: 474
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -119,10 +119,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 474
-    width: 934
+    width: 691
     height: 305
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 14}
@@ -149,7 +149,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1430
+    width: 1293
     height: 829
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -174,7 +174,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1430
+    width: 1293
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -196,7 +196,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 809
-    width: 1430
+    width: 1293
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -219,12 +219,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 934
+    width: 691
     height: 779
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 38
+  controlID: 49
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -244,7 +244,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 934
+    width: 691
     height: 474
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
@@ -265,12 +265,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 226
+    x: 168
     y: 0
-    width: 708
+    width: 523
     height: 474
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -298,9 +298,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2990
+    x: 2747
     y: 81
-    width: 495
+    width: 601
     height: 758
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -313,7 +313,7 @@ MonoBehaviour:
     m_SaveData: []
     m_OverlaysVisible: 1
   m_Spl:
-    ID: 124
+    ID: 113
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
@@ -397,7 +397,7 @@ MonoBehaviour:
       name: RPG Crafting System
       fullName: RPG Crafting System
       resultStatus: 1
-      duration: 0.0208803
+      duration: 0.1010156
       messages: 
       output: 
       stacktrace: 
@@ -412,8 +412,8 @@ MonoBehaviour:
       uniqueId: '[Tests.dll][suite]'
       name: Tests.dll
       fullName: D:/git/CaptainCoderOrg/CraftingSystem/RPG Crafting System/Library/ScriptAssemblies/Tests.dll
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.054945
       messages: 
       output: 
       stacktrace: 
@@ -428,8 +428,8 @@ MonoBehaviour:
       uniqueId: Tests.dll/[CaptainCoder][suite]
       name: CaptainCoder
       fullName: CaptainCoder
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0542344
       messages: 
       output: 
       stacktrace: 
@@ -444,8 +444,8 @@ MonoBehaviour:
       uniqueId: Tests.dll/CaptainCoder/[Tests][CaptainCoder.CraftingSystem][suite]
       name: CraftingSystem
       fullName: CaptainCoder.CraftingSystem
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0539428
       messages: 
       output: 
       stacktrace: 
@@ -460,8 +460,8 @@ MonoBehaviour:
       uniqueId: Tests.dll/CaptainCoder/CraftingSystem/[Tests][CaptainCoder.CraftingSystem.ShapelessRecipeTest][suite]
       name: ShapelessRecipeTest
       fullName: CaptainCoder.CraftingSystem.ShapelessRecipeTest
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0498003
       messages: 
       output: 
       stacktrace: 
@@ -472,12 +472,29 @@ MonoBehaviour:
       categories: []
       parentId: 1007
       parentUniqueId: Tests.dll/CaptainCoder/[Tests][CaptainCoder.CraftingSystem][suite]
+    - id: 1005
+      uniqueId: Tests.dll/CaptainCoder/CraftingSystem/ShapelessRecipeTest/[Tests][CaptainCoder.CraftingSystem.ShapelessRecipeTest.TestConstructorWithBoatDeconstructRecipe]
+      name: TestConstructorWithBoatDeconstructRecipe
+      fullName: CaptainCoder.CraftingSystem.ShapelessRecipeTest.TestConstructorWithBoatDeconstructRecipe
+      resultStatus: 1
+      duration: 0.0289598
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1003
+      parentUniqueId: Tests.dll/CaptainCoder/CraftingSystem/[Tests][CaptainCoder.CraftingSystem.ShapelessRecipeTest][suite]
     - id: 1004
-      uniqueId: Tests.dll/CaptainCoder/CraftingSystem/ShapelessRecipeTest/[Tests][CaptainCoder.CraftingSystem.ShapelessRecipeTest.TestConstructor]
-      name: TestConstructor
-      fullName: CaptainCoder.CraftingSystem.ShapelessRecipeTest.TestConstructor
-      resultStatus: 0
-      duration: 0
+      uniqueId: Tests.dll/CaptainCoder/CraftingSystem/ShapelessRecipeTest/[Tests][CaptainCoder.CraftingSystem.ShapelessRecipeTest.TestConstructorWithBoatRecipe]
+      name: TestConstructorWithBoatRecipe
+      fullName: CaptainCoder.CraftingSystem.ShapelessRecipeTest.TestConstructorWithBoatRecipe
+      resultStatus: 1
+      duration: 0.0053116
       messages: 
       output: 
       stacktrace: 
@@ -494,7 +511,7 @@ MonoBehaviour:
       name: ExampleTest
       fullName: ExampleTest
       resultStatus: 1
-      duration: 0.000794
+      duration: 0.0088711
       messages: 
       output: 
       stacktrace: 
@@ -511,7 +528,7 @@ MonoBehaviour:
       name: ExampleTestSimplePasses
       fullName: ExampleTest.ExampleTestSimplePasses
       resultStatus: 1
-      duration: 0.0002299
+      duration: 0.0009666
       messages: 
       output: 
       stacktrace: 
@@ -523,13 +540,13 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1001
       parentUniqueId: Tests.dll/[Tests][ExampleTest][suite]
-    m_ResultText: ExampleTestSimplePasses (0.000s)
+    m_ResultText: TestConstructorWithBoatDeconstructRecipe (0.029s)
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 33a68fa3
-      m_LastClickedID: -1550866893
-      m_ExpandedIDs: fd95a5203e74764e7b0df34fffffff7f
+      m_SelectedIDs: 7c01e367
+      m_LastClickedID: 1742930300
+      m_ExpandedIDs: e3c011f7e557abf7fd95a5206d36de433e74764e55e4445cffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -571,7 +588,7 @@ MonoBehaviour:
   m_MaxSize: {x: 2048, y: 2048}
   m_TitleContent:
     m_Text: Asset Store
-    m_Image: {fileID: -7444545952099596278, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -8693916549880196297, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
@@ -605,13 +622,13 @@ MonoBehaviour:
   m_MaxSize: {x: 10000, y: 10000}
   m_TitleContent:
     m_Text: Project
-    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -5467254957812901981, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 2056
     y: 555
-    width: 933
+    width: 690
     height: 284
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -636,23 +653,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/CaptainCoder/CraftingSystem
+    - Assets/Crafting Tests
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/CaptainCoder/CraftingSystem
+  - Assets/Crafting Tests
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\git\CaptainCoderOrg\CraftingSystem\RPG Crafting System
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f85f0000
-    m_LastClickedID: 24568
-    m_ExpandedIDs: 00000000e05f0000f25f000000ca9a3b
+    m_SelectedIDs: 0c600000
+    m_LastClickedID: 24588
+    m_ExpandedIDs: 00000000f85f00000a6000000c6000002260000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -680,7 +697,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e05f0000
+    m_ExpandedIDs: 00000000f85f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -705,9 +722,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 40f5ffff
-    m_LastClickedInstanceID: -2752
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 24600000
+    m_LastClickedInstanceID: 24612
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -735,7 +752,7 @@ MonoBehaviour:
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 115
+  m_DirectoriesAreaWidth: 206
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -756,10 +773,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 3013
-    y: 103
-    width: 494.59998
-    height: 822
+    x: 2900
+    y: 81
+    width: 448
+    height: 758
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -776,7 +793,7 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 24692
+  m_LastInspectedObjectInstanceID: 24612
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
@@ -799,13 +816,13 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Hierarchy
-    m_Image: {fileID: -3734745235275155857, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: 7966133145522015247, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 2056
     y: 81
-    width: 225
+    width: 167
     height: 453
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -820,9 +837,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 40f5ffff
+      m_SelectedIDs: 24600000
       m_LastClickedID: 0
-      m_ExpandedIDs: f2faffff
+      m_ExpandedIDs: 1ce9ffff46ebffff7eecffffdaedffff32efffff64f0ffffa8f1ffffc2faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -862,13 +879,13 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Scene
-    m_Image: {fileID: 8634526014445323508, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: 2593428753322112591, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2282
+    x: 2224
     y: 81
-    width: 706
+    width: 521
     height: 453
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -1297,7 +1314,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Game
-    m_Image: {fileID: 4621777727084837110, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
@@ -1321,7 +1338,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1915, y: 961.25}
+  m_TargetSize: {x: 1532, y: 769}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 0
@@ -1395,13 +1412,13 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Console
-    m_Image: {fileID: -4950941429401207979, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -4327648978806127646, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 2056
     y: 555
-    width: 933
+    width: 690
     height: 284
   m_SerializedDataModeController:
     m_DataMode: 0
