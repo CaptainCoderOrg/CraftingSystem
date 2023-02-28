@@ -7,6 +7,8 @@ nav_order: 0
 # Let's Make an RPG Crafting System
 {: .no_toc }
 
+![Crafting System](imgs/crafting-system.png)
+
 Hello coders! Captain Coder here with another learning series. On the Captain
 Coder's Academy discord, it was proposed that I implement a crafting system live
 on stream. This site will (hopefully) serve to chronicle the streams for anyone
@@ -16,14 +18,25 @@ who missed them / wants to catch up.
 * Catch the Captain Live on Twitch: [Twitch]
 * Source Code: [Repository]
 
-## Day 1 - 2023/02/27
+## Day 1 - Feb. 27th 2023
 
-The crew began work on the initial version of the Crafting
-System. We defined our learning goals, created a design document, specified the scope of
-the project, set up a new Unity project, and wrote a simple implementation of a [ShapelessRecipe].
+The crew began work on the initial version of the Crafting System. We defined
+our learning goals, created a design document, specified the scope of the
+project, set up a new Unity project, and wrote a simple implementation of a
+[ShapelessRecipe].
 
-* [Read More](pages/00-day-1.md)
+* [Read More]({% link pages/01-day-1.md %})
 * [Watch On YouTube](https://youtube.com/live/_S4JNwdGPEo?feature=share)
+
+## Day 2 - Feb 28th 2023
+
+The crew continued work on the Crafting System. Today, we explored how to link
+an external **DLL** within a Unity project, began the `CaptainCoder.Core`
+library, defined the API for the [CraftingContainer] class, and began writing a
+unit tests for [CraftingContainer].
+
+* [Read More]({% link pages/02-day-2.md %})
+* [Watch On YouTube](https://youtube.com/live/IA66jZh51h8)
 
 
 {% include Links.md %}
