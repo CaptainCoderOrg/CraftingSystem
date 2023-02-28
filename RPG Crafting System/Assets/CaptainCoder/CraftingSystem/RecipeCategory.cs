@@ -3,13 +3,12 @@ using System.Collections.Generic;
 
 namespace CaptainCoder.CraftingSystem
 {
-    public struct RecipeCategory
+    public struct CraftingCategory
     {
         public readonly string Name;
-        public RecipeCategory(string name)
+        public CraftingCategory(string name)
         {
             Name = name;
         }
-
     } 
 }

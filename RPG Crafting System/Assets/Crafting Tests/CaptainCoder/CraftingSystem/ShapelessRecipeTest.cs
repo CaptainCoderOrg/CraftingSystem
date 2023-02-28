@@ -18,8 +18,8 @@ namespace CaptainCoder.CraftingSystem
             Item rope = new ("Rope");
             Item boat = new ("Boat");
             List<Item> boatIngredients = new () { wood, wood, wood, rope };
-            RecipeCategory woodWorkCategory = new ("Wood Work");
-            ShapelessRecipe boatRecipe = new (boatIngredients, woodWorkCategory, new List<Item>(){ boat } );
+            CraftingCategory woodWorkCategory = new ("Wood Work");
+            ShapelessRecipe<Item> boatRecipe = new (boatIngredients, woodWorkCategory, new List<Item>(){ boat } );
 
             Assert.True(boatRecipe.Result.Contains(boat));
             Assert.AreEqual(woodWorkCategory, boatRecipe.Category);
@@ -45,8 +45,8 @@ namespace CaptainCoder.CraftingSystem
             Item wood = new ("Wood");
             Item boat = new ("Boat");
             List<Item> boatSalvageIngredients = new () { boat };
-            RecipeCategory salvageCategory = new ("Salvage");
-            ShapelessRecipe boatSalvageRecipe = new (boatSalvageIngredients, salvageCategory, new List<Item>(){ wood, wood, wood } );
+            CraftingCategory salvageCategory = new ("Salvage");
+            ShapelessRecipe<Item> boatSalvageRecipe = new (boatSalvageIngredients, salvageCategory, new List<Item>(){ wood, wood, wood } );
 
             Assert.AreEqual(1, boatSalvageRecipe.Ingredients.Count());
             Assert.True(boatSalvageRecipe.Ingredients.Contains(boat));

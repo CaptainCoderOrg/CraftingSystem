@@ -5,11 +5,11 @@ using System;
 
 namespace CaptainCoder.CraftingSystem
 {
-    public class ShapelessRecipe
+    public class ShapelessRecipe<T> where T : IItem
     {
-        private readonly List<IItem> _ingredients;
-        private readonly List<IItem> _result;
-        public ShapelessRecipe(IEnumerable<IItem> ingredients, RecipeCategory category, IEnumerable<IItem> result)
+        private readonly List<T> _ingredients;
+        private readonly List<T> _result;
+        public ShapelessRecipe(IEnumerable<T> ingredients, CraftingCategory category, IEnumerable<T> result)
         {
             if (ingredients.Count() < 1) { throw new ArgumentException("Must have at least 1 ingredient."); }
             if (result.Count() < 1) { throw new ArgumentException("Must have at least 1 result item."); }
@@ -22,27 +22,27 @@ namespace CaptainCoder.CraftingSystem
         /// Returns an IEnumerable of the items necessary
         /// to perform this recipe. The order is undefined.
         /// </summary>
-        public IEnumerable<IItem> Ingredients 
+        public IEnumerable<T> Ingredients 
         {
             get
             {
-                foreach(IItem ingredient in _ingredients)
+                foreach(T ingredient in _ingredients)
                 {
                     yield return ingredient;
                 }
             }
         }
-        public IEnumerable<IItem> Result 
+        public IEnumerable<T> Result 
         {
             get
             {
-                foreach(IItem result in _result)
+                foreach(T result in _result)
                 {
                     yield return result;
                 }
             }
         }
-        public RecipeCategory Category { get; }
+        public CraftingCategory Category { get; }
         
 
     }
