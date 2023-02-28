@@ -1,3 +1,6 @@
 [submodule "RPG Crafting System/Assets/Libs/CaptainCoder.Core"]
 	path = RPG Crafting System/Assets/Libs/CaptainCoder.Core
 	url = https://github.com/CaptainCoderOrg/CaptainCoder.Core.git
+[submodule "CaptainCoder.Core"]
+	path = CaptainCoder.Core
+	url = https://github.com/CaptainCoderOrg/CaptainCoder.Core

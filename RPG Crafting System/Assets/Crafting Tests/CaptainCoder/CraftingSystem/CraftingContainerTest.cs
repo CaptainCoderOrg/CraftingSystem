@@ -5,10 +5,8 @@ using UnityEngine;
 using UnityEngine.TestTools; 
 using System.Linq;
 using CaptainCoder.Core;
-
 namespace CaptainCoder.CraftingSystem
 {
-
     public class CraftingContainerTest
     {
         private CraftingContainer<Item> cc2x3WoodWork;
