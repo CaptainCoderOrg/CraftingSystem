@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using CaptainCoder.Core;
 using System.Diagnostics;
-using System; 
+using System;
 using System.Linq;
 namespace CaptainCoder.CraftingSystem
 {
@@ -12,8 +12,8 @@ namespace CaptainCoder.CraftingSystem
         private readonly HashSet<Position> _invalidPositions;
         private readonly HashSet<CraftingCategory> _categories;
 
-        public CraftingContainer(int rows, int columns, CraftingCategory category, IEnumerable<Position> invalidPositions = null) 
-            : this(rows, columns, new []{category}, invalidPositions) {} 
+        public CraftingContainer(int rows, int columns, CraftingCategory category, IEnumerable<Position> invalidPositions = null)
+            : this(rows, columns, new[] { category }, invalidPositions) { }
 
         public CraftingContainer(int rows, int columns, IEnumerable<CraftingCategory> categories, IEnumerable<Position> invalidPositions = null)
         {
@@ -34,17 +34,12 @@ namespace CaptainCoder.CraftingSystem
         {
             get
             {
-                foreach((Position pos, T item) in _grid)
+                foreach ((Position pos, T item) in _grid)
                 {
                     yield return (pos, item);
                 }
             }
         }
-
-        // Add Item
-        // * Add to empty space
-        // * Add to out of bounds space (invalid)
-        // * Add to space with already existing item
 
         /// <summary>
         /// Attempts to add the specified <paramref name="item"/> into this <see cref="CraftingContainer"/>
@@ -53,39 +48,47 @@ namespace CaptainCoder.CraftingSystem
         /// </summary>
         public bool TryAddItem(Position position, T item)
         {
+            if (position.Row < 0 || position.Col < 0 || position.Row >= Rows || position.Col >= Columns) { return false; }
+            if (InvalidPositions.Contains(position)) { return false; }
             return _grid.TryAdd(position, item); // returns false if position is already set
         }
 
-        // Move Item in Container
-        // * Move into empty space
-        // * Move into occupied space
-        // * Move into out of bounds space
-        public bool Move(Position from, Position to)
+        public bool TryMove(Position from, Position to)
         {
-            return false;
+            // At least ONE position must have something
+            if (!_grid.ContainsKey(from) && !_grid.ContainsKey(to)) { return false; }
+            // At this point, at least ONE position is occupied
+
+            // If both spots are occupied, swap them
+            if (_grid.ContainsKey(from) && _grid.ContainsKey(to))
+            {
+                (_grid[to], _grid[from]) = (_grid[from], _grid[to]);
+            }
+            else if (_grid.ContainsKey(from))
+            {
+                _grid[to] = _grid[from];
+                _grid.Remove(from);
+            }
+            else // if (_grid.ContainsKey(to))
+            {
+                _grid[from] = _grid[to];
+                _grid.Remove(to);
+            }
+            return true;
         }
 
-        // Remove Item
-        // * Remove from empty space
-        // * Remove from out of bounds
-        // * Remove from spot with item
         public bool TryRemove(Position position, out T removed)
         {
-            removed = default;
+            if (_grid.TryGetValue(position, out removed))
+            {
+                _grid.Remove(position);
+                return true;
+            }
             return false;
         }
 
-        public bool TryItemAt(Position position, out T result)
-        {
-            result = default;
-            return false;
-        }
-        public T ItemAt(Position position)
-        {
-            return default;
-        }
-
+        public bool TryItemAt(Position position, out T result) => _grid.TryGetValue(position, out result);
+        public T ItemAt(Position position) => _grid[position];
         public bool HasItemAt(Position position) => _grid.ContainsKey(position);
-
     }
 }
