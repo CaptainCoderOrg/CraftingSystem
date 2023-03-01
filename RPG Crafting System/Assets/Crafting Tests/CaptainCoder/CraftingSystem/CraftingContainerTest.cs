@@ -9,12 +9,12 @@ namespace CaptainCoder.CraftingSystem
 {
     public class CraftingContainerTest
     {
-        private CraftingContainer<Item> _cc2x3WoodWork;
-        private CraftingContainer<Item> _cc4x4WithNoCorners;
-        private Item _wood;
-        private Item _boat;
-        private Item _rope;
-        private Item _metalStud;
+        private CraftingContainer<SimpleItem> _cc2x3WoodWork;
+        private CraftingContainer<SimpleItem> _cc4x4WithNoCorners;
+        private SimpleItem _wood;
+        private SimpleItem _boat;
+        private SimpleItem _rope;
+        private SimpleItem _metalStud;
         
         [SetUp]
         public void Setup()
@@ -35,10 +35,10 @@ namespace CaptainCoder.CraftingSystem
                 new CraftingCategory[]{new ("Simple Food"), new ("Advanced Food")},
                 new Position[]{ new (0,0), new(0,3), new(3,0), new(3,3) }
                 );
-            _wood = new Item("Wood");
-            _boat = new Item("Boat");
-            _rope = new Item("Rope");
-            _metalStud = new Item("Metal Stud");
+            _wood = new SimpleItem("Wood");
+            _boat = new SimpleItem("Boat");
+            _rope = new SimpleItem("Rope");
+            _metalStud = new SimpleItem("Metal Stud");
         }
 
         // A Test behaves as an ordinary method
@@ -66,7 +66,7 @@ namespace CaptainCoder.CraftingSystem
 
             Assert.True(_cc2x3WoodWork.TryAddItem(new Position(0, 0), _wood));
             Assert.True(_cc2x3WoodWork.HasItemAt(new Position(0, 0)));
-            (Position pos, Item item)[] positions = _cc2x3WoodWork.Positions.ToArray();
+            (Position pos, SimpleItem item)[] positions = _cc2x3WoodWork.Positions.ToArray();
             Assert.AreEqual(1, positions.Length);
             Assert.AreEqual((new Position(0, 0), _wood), positions[0]);
         }
@@ -93,14 +93,14 @@ namespace CaptainCoder.CraftingSystem
             Assert.True(_cc2x3WoodWork.HasItemAt(new Position(0, 1)));
             Assert.True(_cc2x3WoodWork.HasItemAt(new Position(0, 2)));
 
-            HashSet<(Position pos, Item item)> expectedPositions = new ()
+            HashSet<(Position pos, SimpleItem item)> expectedPositions = new ()
             {
                 (new Position(0, 2), _metalStud),
                 (new Position(0, 1), _rope),
                 (new Position(0, 0), _wood),
                 (new Position(1, 0), _wood),
             };
-            HashSet<(Position pos, Item item)> positions = _cc2x3WoodWork.Positions.ToHashSet();
+            HashSet<(Position pos, SimpleItem item)> positions = _cc2x3WoodWork.Positions.ToHashSet();
             Assert.True(expectedPositions.SetEquals(positions));
         }
 
@@ -164,10 +164,10 @@ namespace CaptainCoder.CraftingSystem
         [TestCase(1, 2)]
         public void TestTryRemove(int row, int col)
         {
-            Assert.False(_cc2x3WoodWork.TryRemove(new(row,col), out Item _));
+            Assert.False(_cc2x3WoodWork.TryRemove(new(row,col), out SimpleItem _));
             Assert.True(_cc2x3WoodWork.TryAddItem(new(row,col), _boat));
             Assert.True(_cc2x3WoodWork.HasItemAt(new(row,col)));
-            Assert.True(_cc2x3WoodWork.TryRemove(new(row,col), out Item removed));
+            Assert.True(_cc2x3WoodWork.TryRemove(new(row,col), out SimpleItem removed));
             Assert.AreEqual(_boat, removed);
             Assert.False(_cc2x3WoodWork.HasItemAt(new(row,col)));    
         }

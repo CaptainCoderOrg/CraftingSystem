@@ -1,11 +1,10 @@
-
+using System;
 namespace CaptainCoder.CraftingSystem
 {
-
-    public class Item : IItem
+    public class SimpleItem : IItem
     {
 
-        public Item(string name)
+        public SimpleItem(string name)
         {
             Name = name;
         }

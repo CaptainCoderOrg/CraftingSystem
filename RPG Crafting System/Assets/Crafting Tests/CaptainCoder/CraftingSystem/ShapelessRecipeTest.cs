@@ -14,12 +14,12 @@ namespace CaptainCoder.CraftingSystem
         [Test]
         public void TestConstructorWithBoatRecipe()
         {
-            Item wood = new ("Wood");
-            Item rope = new ("Rope");
-            Item boat = new ("Boat");
-            List<Item> boatIngredients = new () { wood, wood, wood, rope };
+            SimpleItem wood = new ("Wood");
+            SimpleItem rope = new ("Rope");
+            SimpleItem boat = new ("Boat");
+            List<SimpleItem> boatIngredients = new () { wood, wood, wood, rope };
             CraftingCategory woodWorkCategory = new ("Wood Work");
-            ShapelessRecipe<Item> boatRecipe = new (boatIngredients, woodWorkCategory, new List<Item>(){ boat } );
+            ShapelessRecipe<SimpleItem> boatRecipe = new (boatIngredients, woodWorkCategory, new List<SimpleItem>(){ boat } );
 
             Assert.True(boatRecipe.Result.Contains(boat));
             Assert.AreEqual(woodWorkCategory, boatRecipe.Category);
@@ -27,8 +27,8 @@ namespace CaptainCoder.CraftingSystem
             void TestIngredients()
             {
                 Assert.AreEqual(4, boatRecipe.Ingredients.Count());
-                List<Item> expected = new () { wood, rope, wood, wood };
-                foreach (Item ingredient in boatRecipe.Ingredients)
+                List<SimpleItem> expected = new () { wood, rope, wood, wood };
+                foreach (SimpleItem ingredient in boatRecipe.Ingredients)
                 {
                     Assert.True(expected.Contains(ingredient));
                     expected.Remove(ingredient);
@@ -42,11 +42,11 @@ namespace CaptainCoder.CraftingSystem
         [Test]
         public void TestConstructorWithBoatDeconstructRecipe()
         {
-            Item wood = new ("Wood");
-            Item boat = new ("Boat");
-            List<Item> boatSalvageIngredients = new () { boat };
+            SimpleItem wood = new ("Wood");
+            SimpleItem boat = new ("Boat");
+            List<SimpleItem> boatSalvageIngredients = new () { boat };
             CraftingCategory salvageCategory = new ("Salvage");
-            ShapelessRecipe<Item> boatSalvageRecipe = new (boatSalvageIngredients, salvageCategory, new List<Item>(){ wood, wood, wood } );
+            ShapelessRecipe<SimpleItem> boatSalvageRecipe = new (boatSalvageIngredients, salvageCategory, new List<SimpleItem>(){ wood, wood, wood } );
 
             Assert.AreEqual(1, boatSalvageRecipe.Ingredients.Count());
             Assert.True(boatSalvageRecipe.Ingredients.Contains(boat));
@@ -55,8 +55,8 @@ namespace CaptainCoder.CraftingSystem
             void TestResults()
             {
                 Assert.AreEqual(3, boatSalvageRecipe.Result.Count());
-                List<Item> expected = new () { wood, wood, wood };
-                foreach (Item ingredient in boatSalvageRecipe.Result)
+                List<SimpleItem> expected = new () { wood, wood, wood };
+                foreach (SimpleItem ingredient in boatSalvageRecipe.Result)
                 {
                     Assert.True(expected.Contains(ingredient));
                     expected.Remove(ingredient);

@@ -1,7 +1,9 @@
 {
-    "name": "CraftingSystem",
+    "name": "CraftingSystem.UnityEngine",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "GUID:b99966b0af10a584991c56aa68773f45"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
@@ -12,5 +14,5 @@
     "autoReferenced": true,
     "defineConstraints": [],
     "versionDefines": [],
-    "noEngineReferences": true
+    "noEngineReferences": false
 }
