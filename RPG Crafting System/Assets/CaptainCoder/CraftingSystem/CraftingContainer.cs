@@ -6,19 +6,19 @@ using System;
 using System.Linq;
 namespace CaptainCoder.CraftingSystem
 {
-    public class CraftingContainer<T> where T : IItem
+    public class CraftingContainer<T> : ICraftingContainer<T> where T : IItem
     {
         private readonly Dictionary<Position, T> _grid;
         private readonly HashSet<Position> _invalidPositions;
-        private readonly HashSet<CraftingCategory> _categories;
+        private readonly HashSet<ICraftingCategory> _categories;
 
-        public CraftingContainer(int rows, int columns, CraftingCategory category, IEnumerable<Position> invalidPositions = null)
+        public CraftingContainer(int rows, int columns, ICraftingCategory category, IEnumerable<Position> invalidPositions = null)
             : this(rows, columns, new[] { category }, invalidPositions) { }
 
-        public CraftingContainer(int rows, int columns, IEnumerable<CraftingCategory> categories, IEnumerable<Position> invalidPositions = null)
+        public CraftingContainer(int rows, int columns, IEnumerable<ICraftingCategory> categories, IEnumerable<Position> invalidPositions = null)
         {
             if (columns < 1 || rows < 1) { throw new ArgumentException($"Invalid CraftingContainer size columns: {columns}, rows: {rows}"); };
-            if (!categories.Any(_ => true)) { throw new ArgumentException($"CraftingContainer requires at least one {nameof(CraftingCategory)}."); }
+            if (!categories.Any(_ => true)) { throw new ArgumentException($"CraftingContainer requires at least one {nameof(ICraftingCategory)}."); }
             Rows = rows;
             Columns = columns;
             _invalidPositions = invalidPositions == null ? new HashSet<Position>() : invalidPositions.ToHashSet();
@@ -28,7 +28,7 @@ namespace CaptainCoder.CraftingSystem
 
         public int Rows { get; }
         public int Columns { get; }
-        public HashSet<CraftingCategory> Categories => _categories.ToHashSet();
+        public HashSet<ICraftingCategory> Categories => _categories.ToHashSet();
         public HashSet<Position> InvalidPositions => _invalidPositions.ToHashSet();
         public IEnumerable<(Position, T)> Positions
         {

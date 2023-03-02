@@ -32,7 +32,7 @@ namespace CaptainCoder.CraftingSystem
                . .
             */
             _cc4x4WithNoCorners = new (4, 4, 
-                new CraftingCategory[]{new ("Simple Food"), new ("Advanced Food")},
+                new ICraftingCategory[]{new CraftingCategory("Simple Food"), new CraftingCategory("Advanced Food")},
                 new Position[]{(0,0), (0,3), (3,0), (3,3) }
                 );
             _wood = new SimpleItem("Wood");
@@ -47,7 +47,7 @@ namespace CaptainCoder.CraftingSystem
         {
             Assert.AreEqual(2, _cc2x3WoodWork.Rows);
             Assert.AreEqual(3, _cc2x3WoodWork.Columns);
-            HashSet<CraftingCategory> expectedCategories = new () { new CraftingCategory("Wood Work") };
+            HashSet<ICraftingCategory> expectedCategories = new () { new CraftingCategory("Wood Work") };
             Assert.AreEqual(0, _cc2x3WoodWork.InvalidPositions.Count);
             Assert.AreEqual(0, _cc2x3WoodWork.Positions.Count());
             Assert.True(expectedCategories.SetEquals(_cc2x3WoodWork.Categories));
