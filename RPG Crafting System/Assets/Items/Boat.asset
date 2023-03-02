@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b9f8096f79f8d64da1a9c400a826443, type: 3}
   m_Name: Boat
   m_EditorClassIdentifier: 
-  _name: Wood
+  _name: Boat

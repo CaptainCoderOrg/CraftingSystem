@@ -10,5 +10,16 @@ namespace CaptainCoder.CraftingSystem
         {
             Name = name;
         }
+
+        public override bool Equals(object obj)
+        {
+            return obj is CraftingCategory category &&
+                   Name == category.Name;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Name);
+        }
     } 
 }

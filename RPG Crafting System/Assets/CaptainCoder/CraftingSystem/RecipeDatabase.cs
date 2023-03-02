@@ -1,16 +1,34 @@
 using System;
 using System.Collections.Generic;
-
+using System.Linq;
+using CaptainCoder.Core;
 namespace CaptainCoder.CraftingSystem
 {
     public class RecipeDatabase<T> where T : IItem
     {
-        private Dictionary<RecipeEntry, ShapelessRecipe<T>> _database;
+        private readonly Dictionary<RecipeEntry, ShapelessRecipe<T>> _database;
 
+        public RecipeDatabase(IEnumerable<ShapelessRecipe<T>> recipes)
+        {
+            if (recipes == null) { throw new ArgumentNullException("Recipes must be non-null."); }
+            _database = new Dictionary<RecipeEntry, ShapelessRecipe<T>>();
+            foreach(ShapelessRecipe<T> recipe in recipes)
+            {
+                _database[new RecipeEntry(recipe.Ingredients, recipe.Category)] = recipe;
+            }
+        }
+
+        /// <summary>
+        /// Given <paramref name="ingredients"/> and a <paramref
+        /// name="category"/>, attempts to find a <paramref name="recipe"/> in
+        /// the database. If one is found, returns true and populated <paramref
+        /// name="recipe"/>. Otherwise, returns false and the value of <paramref
+        /// name="recipe"/> is undefined.
+        /// </summary>
         public bool TryGetRecipe(IEnumerable<T> ingredients, CraftingCategory category, out ShapelessRecipe<T> recipe)
         {
-            recipe = null;
-            return false;
+            RecipeEntry key = new RecipeEntry(ingredients, category);
+            return _database.TryGetValue(key, out recipe);
         }
 
         public class RecipeEntry
@@ -42,11 +60,8 @@ namespace CaptainCoder.CraftingSystem
             {
                 return obj is RecipeEntry entry &&
                         _hashCode == entry._hashCode &&
-                        // TODO: Why does == not work here: _category == entry._category &&
                         _category.Equals(entry._category) && 
-                        // TODO: Deep compare on incoming dictionary
-                        true; 
-                       //EqualityComparer<Dictionary<T, int>>.Default.Equals(_itemCounts, entry._itemCounts);    
+                        _itemCounts.KeyValuePairEquals(entry._itemCounts); 
             }
 
             public override int GetHashCode() => _hashCode;
