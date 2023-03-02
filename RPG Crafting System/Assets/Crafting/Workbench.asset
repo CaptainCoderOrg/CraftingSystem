@@ -12,7 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fea550b1a08d36849af7499eef68ef30, type: 3}
   m_Name: Workbench
   m_EditorClassIdentifier: 
+  <Name>k__BackingField: Workbench
   _rows: 4
   _cols: 4
   _craftingCategory: {fileID: 11400000, guid: 72081451fd4f8ef4cb05ac2fad452f0a, type: 2}
-  <Name>k__BackingField: Workbench
+  _invalidPositions:
+  - Row: 0
+    Col: 0
+  - Row: 3
+    Col: 0
+  - Row: 3
+    Col: 3
+  - Row: 0
+    Col: 3

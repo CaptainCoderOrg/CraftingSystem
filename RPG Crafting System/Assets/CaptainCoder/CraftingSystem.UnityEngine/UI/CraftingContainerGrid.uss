@@ -1,0 +1,67 @@
+.container {
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0);
+    align-items: center;
+    justify-content: center;
+}
+
+.grid {
+    flex-grow: 1;
+    background-color: rgb(28, 32, 36);
+    width: 50%;
+    height: 75%;
+    min-width: auto;
+    min-height: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 50%;
+    max-height: 75%;
+    border-left-color: rgb(255, 197, 0);
+    border-right-color: rgb(255, 197, 0);
+    border-top-color: rgb(255, 197, 0);
+    border-bottom-color: rgb(255, 197, 0);
+    border-top-width: 5px;
+}
+
+.header {
+    font-size: 24px;
+    color: rgb(255, 197, 0);
+    margin-bottom: 10px;
+    border-left-color: rgb(64, 74, 82);
+    border-right-color: rgb(64, 74, 82);
+    border-top-color: rgb(64, 74, 82);
+    border-bottom-color: rgb(64, 74, 82);
+    border-bottom-width: 1px;
+}
+
+.slot-container {
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0);
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.grid-slot-container {
+    width: 128px;
+    height: 128px;
+    margin: 5px;
+    border-left-color: rgb(48, 48, 48);
+    border-right-color: rgb(48, 48, 48);
+    border-top-color: rgb(48, 48, 48);
+    border-bottom-color: rgb(48, 48, 48);
+    background-color: rgb(9, 19, 21);
+    background-image: url('project://database/Assets/Sprites/ItemSlotBackground.png?fileID=21300000&guid=60f3c469d2a2afd4993c35c96c9464f3&type=3#ItemSlotBackground');
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.grid-slot-icon {
+    padding: 15px;
+    flex-shrink: 0;
+    flex-grow: 1;
+}
