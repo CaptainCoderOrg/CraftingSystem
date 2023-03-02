@@ -52,7 +52,7 @@ namespace CaptainCoder.CraftingSystem
             ShapelessRecipe<SimpleItem>[] recipes = new []{ boatRecipe, ropeRecipe };
             RecipeDatabase<SimpleItem> database = new (recipes);
 
-            Assert.True(database.TryGetRecipe(boatIngredients, woodWorkCategory, out ShapelessRecipe<SimpleItem> actual));
+            Assert.True(database.TryGetRecipe(boatIngredients, woodWorkCategory, out IShapelessRecipe<SimpleItem> actual));
             Assert.AreEqual(boatRecipe, actual);
 
             Assert.False(database.TryGetRecipe(boatIngredients, sewingCategory, out _));

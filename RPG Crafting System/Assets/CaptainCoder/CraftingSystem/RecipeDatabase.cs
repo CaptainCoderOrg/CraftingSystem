@@ -6,13 +6,13 @@ namespace CaptainCoder.CraftingSystem
 {
     public class RecipeDatabase<T> where T : IItem
     {
-        private readonly Dictionary<RecipeEntry, ShapelessRecipe<T>> _database;
+        private readonly Dictionary<RecipeEntry, IShapelessRecipe<T>> _database;
 
-        public RecipeDatabase(IEnumerable<ShapelessRecipe<T>> recipes)
+        public RecipeDatabase(IEnumerable<IShapelessRecipe<T>> recipes)
         {
             if (recipes == null) { throw new ArgumentNullException("Recipes must be non-null."); }
-            _database = new Dictionary<RecipeEntry, ShapelessRecipe<T>>();
-            foreach(ShapelessRecipe<T> recipe in recipes)
+            _database = new Dictionary<RecipeEntry, IShapelessRecipe<T>>();
+            foreach(IShapelessRecipe<T> recipe in recipes)
             {
                 _database[new RecipeEntry(recipe.Ingredients, recipe.Category)] = recipe;
             }
@@ -25,7 +25,7 @@ namespace CaptainCoder.CraftingSystem
         /// name="recipe"/>. Otherwise, returns false and the value of <paramref
         /// name="recipe"/> is undefined.
         /// </summary>
-        public bool TryGetRecipe(IEnumerable<T> ingredients, CraftingCategory category, out ShapelessRecipe<T> recipe)
+        public bool TryGetRecipe(IEnumerable<T> ingredients, ICraftingCategory category, out IShapelessRecipe<T> recipe)
         {
             RecipeEntry key = new RecipeEntry(ingredients, category);
             return _database.TryGetValue(key, out recipe);
@@ -34,10 +34,10 @@ namespace CaptainCoder.CraftingSystem
         public class RecipeEntry
         {
             private readonly Dictionary<T, int> _itemCounts = new();
-            private readonly CraftingCategory _category;
+            private readonly ICraftingCategory _category;
             private readonly int _hashCode;
 
-            public RecipeEntry(IEnumerable<T> ingredients, CraftingCategory category)
+            public RecipeEntry(IEnumerable<T> ingredients, ICraftingCategory category)
             {
                 _hashCode = 0;
                 foreach(T item in ingredients)

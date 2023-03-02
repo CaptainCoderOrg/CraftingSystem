@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using System;
 namespace CaptainCoder.CraftingSystem
 {
-    public readonly struct CraftingCategory
+    public readonly struct CraftingCategory : ICraftingCategory
     {
-        public readonly string Name;
+        public string Name { get; }
         public CraftingCategory(string name)
         {
             Name = name;
@@ -17,9 +15,6 @@ namespace CaptainCoder.CraftingSystem
                    Name == category.Name;
         }
 
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(Name);
-        }
+        public override int GetHashCode() => HashCode.Combine(Name);
     } 
 }
