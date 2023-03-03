@@ -3,7 +3,7 @@
     <ui:VisualElement name="Container" class="container">
         <ui:VisualElement name="Grid" class="grid">
             <ui:Label tabindex="-1" text="Crafting" display-tooltip-when-elided="true" name="Header" class="header" />
-            <ui:VisualElement name="SlotContainer" class="slot-container" style="flex-direction: column;" />
+            <ui:VisualElement name="SlotContainer" class="slot-container" style="flex-direction: row;" />
         </ui:VisualElement>
         <ui:VisualElement name="GhostIcon" class="ghost-icon" />
     </ui:VisualElement>
