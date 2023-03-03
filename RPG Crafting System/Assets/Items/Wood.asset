@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Wood
   m_EditorClassIdentifier: 
   _name: Wood
+  <Sprite>k__BackingField: {fileID: 21300000, guid: 8c55f94f4f56095419099f74b9fb28d5, type: 3}

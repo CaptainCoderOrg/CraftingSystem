@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace CaptainCoder.CraftingSystem.UnityEngine
 {
@@ -9,5 +10,7 @@ namespace CaptainCoder.CraftingSystem.UnityEngine
         [SerializeField]
         private string _name;
         public string Name => _name;
+        [field: SerializeField]
+        public Sprite Sprite { get; private set; }
     }
 }

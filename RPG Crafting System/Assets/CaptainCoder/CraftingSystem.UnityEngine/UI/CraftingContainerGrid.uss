@@ -65,3 +65,12 @@
     flex-shrink: 0;
     flex-grow: 1;
 }
+
+.ghost-icon {
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    width: 128px;
+    height: 128px;
+    visibility: hidden;
+}

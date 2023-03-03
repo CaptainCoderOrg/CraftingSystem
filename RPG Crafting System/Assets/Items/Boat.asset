@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Boat
   m_EditorClassIdentifier: 
   _name: Boat
+  <Sprite>k__BackingField: {fileID: 21300000, guid: ceed014a91f4fd74dbe9bebf73d27a75, type: 3}
