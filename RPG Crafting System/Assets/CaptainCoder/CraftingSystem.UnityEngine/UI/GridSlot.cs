@@ -9,21 +9,27 @@ namespace CaptainCoder.CraftingSystem.UnityEngine
         public Image Icon { get; private set; }
         [field: SerializeField]
         public ItemData Item { get; private set; }
-        public GridSlot()
+        public bool IsInvalid { get; private set; }
+        public GridSlot(bool isInvalid = false)
         {
+            IsInvalid = isInvalid;
             //Create a new Image element and add it to the root
             Icon = new Image();
             Add(Icon);
             //Add USS style properties to the elements
             Icon.AddToClassList("grid-slot-icon");
+            if (isInvalid) { AddToClassList("grid-slot-container-invalid"); }
+            else { AddToClassList("grid-slot-container-valid"); }
             AddToClassList("grid-slot-container");
             RegisterCallback<PointerDownEvent>(OnPointerDown);
         }
 
-        public void SetItem(ItemData item)
+        public bool SetItem(ItemData item)
         {
+            if (IsInvalid) { return false; }
             Icon.image = item.Sprite.texture;
             Item = item;
+            return true;
         }
 
         public void ClearItem()
@@ -35,7 +41,7 @@ namespace CaptainCoder.CraftingSystem.UnityEngine
         private void OnPointerDown(PointerDownEvent evt)
         {
             //Not the left mouse button
-            if (evt.button != 0 || Item == null)
+            if (IsInvalid || evt.button != 0 || Item == null)
             {
                 return;
             }

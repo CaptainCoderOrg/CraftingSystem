@@ -53,11 +53,24 @@
     border-top-color: rgb(48, 48, 48);
     border-bottom-color: rgb(48, 48, 48);
     background-color: rgb(9, 19, 21);
-    background-image: url('project://database/Assets/Sprites/ItemSlotBackground.png?fileID=21300000&guid=60f3c469d2a2afd4993c35c96c9464f3&type=3#ItemSlotBackground');
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
+}
+
+.grid-slot-container-valid {
+    background-color: rgb(0, 0, 0);
+    background-image: url('project://database/Assets/Sprites/ItemSlotBackground.png?fileID=21300000&guid=60f3c469d2a2afd4993c35c96c9464f3&type=3#ItemSlotBackground');
+}
+
+.grid-slot-container-invalid {
+    background-color: rgb(255, 0, 0);
+    background-image: url('project://database/Assets/Sprites/ItemSlotInvalid.png?fileID=21300000&guid=d518c5a6a061d674799b5874c91f9c44&type=3#ItemSlotInvalid');
+}
+
+.grid-row {
+    flex-direction: row;
 }
 
 .grid-slot-icon {

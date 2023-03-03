@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 1845251279}
   - component: {fileID: 1845251281}
   m_Layer: 5
-  m_Name: UserInterface
+  m_Name: Crafting Container UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -277,3 +277,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Database>k__BackingField: {fileID: 11400000, guid: f0f9f424d1212944e93edfa9a21064d8, type: 2}
+  <CraftingContainer>k__BackingField: {fileID: 11400000, guid: e04d87f40edf8a4418a94674a42cc861, type: 2}

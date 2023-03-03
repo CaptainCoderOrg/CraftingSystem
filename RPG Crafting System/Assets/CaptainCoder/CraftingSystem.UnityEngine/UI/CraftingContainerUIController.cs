@@ -11,6 +11,8 @@ namespace CaptainCoder.CraftingSystem.UnityEngine
     {
         [field: SerializeField]
         public ItemDatabase Database { get; private set; }
+        [field: SerializeField]
+        public CraftingContainerData<ItemData> CraftingContainer { get; private set; }
         public List<GridSlot> GridSlots = new();
         private VisualElement m_Root;
         private VisualElement m_SlotContainer;
@@ -26,18 +28,34 @@ namespace CaptainCoder.CraftingSystem.UnityEngine
             m_Root = GetComponent<UIDocument>().rootVisualElement;
             //Search the root for the SlotContainer Visual Element
             m_SlotContainer = m_Root.Q<VisualElement>("SlotContainer");
+            var header = m_Root.Q<Label>("Header");
+            header.text = CraftingContainer.Name;
+            
             m_GhostIcon = m_Root.Q<VisualElement>("GhostIcon");
             //Create InventorySlots and add them as children to the SlotContainer
-            for (int i = 0; i < 20; i++)
+            HashSet<Core.Position> invalidPositions = CraftingContainer.InvalidPositions;
+            for (int r = 0; r < CraftingContainer.Rows; r++)
             {
-
-                GridSlot item = new();
-                if (i == 0) { item.SetItem(Database.Boat); }
-                if (i == 1) { item.SetItem(Database.Rope); }
-                if (i == 2) { item.SetItem(Database.Wood); }
-                GridSlots.Add(item);
-                m_SlotContainer.Add(item);
+                GridRow row = new ();
+                m_SlotContainer.Add(row);
+                for (int c = 0; c < CraftingContainer.Columns; c++)
+                {
+                    GridSlot slot = invalidPositions.Contains(new Core.Position(r,c)) ? new GridSlot(true) : new GridSlot();
+                    GridSlots.Add(slot);
+                    // m_SlotContainer.Add(slot);
+                    row.Add(slot);
+                }
             }
+            // for (int i = 0; i < 20; i++)
+            // {
+
+            //     GridSlot item = new();
+            //     if (i == 0) { item.SetItem(Database.Boat); }
+            //     if (i == 1) { item.SetItem(Database.Rope); }
+            //     if (i == 2) { item.SetItem(Database.Wood); }
+            //     GridSlots.Add(item);
+            //     m_SlotContainer.Add(item);
+            // }
 
             m_GhostIcon.RegisterCallback<PointerMoveEvent>(OnPointerMove);
             m_GhostIcon.RegisterCallback<PointerUpEvent>(OnPointerUp);
@@ -103,12 +121,12 @@ namespace CaptainCoder.CraftingSystem.UnityEngine
             m_GhostIcon.style.visibility = Visibility.Hidden;
         }
 
-        #region UXML
-        [Preserve]
-        public new class UxmlFactory : UxmlFactory<GridSlot, UxmlTraits> { }
-        [Preserve]
-        public new class UxmlTraits : VisualElement.UxmlTraits { }
-        #endregion
+        // #region UXML
+        // [Preserve]
+        // public new class UxmlFactory : UxmlFactory<GridSlot, UxmlTraits> { }
+        // [Preserve]
+        // public new class UxmlTraits : VisualElement.UxmlTraits { }
+        // #endregion
 
     }
 }
