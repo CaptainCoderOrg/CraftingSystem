@@ -49,5 +49,15 @@ started work on an implementation of the [RecipeDatabase] class.
 * [Read More]({% link pages/03-day-3.md %})
 * [Watch On YouTube](https://youtube.com/live/6p3TJ3fbHe4)
 
+## Day 4: Interfaces and Exploring UI Toolkit"
+
+Today, we finished a implementing the `RecipeDatabase` class, refactored
+the CraftingSystem to expose additional interfaces, implemented a
+`CraftingContainerData` ScriptableObject, and began exploring using 
+the UI Toolkit in play mode.
+
+* [Read More]({% link pages/04-day-4.md %})
+* [Watch On YouTube](https://youtube.com/live/N8lzDTX7_GM)
+
 
 {% include Links.md %}
