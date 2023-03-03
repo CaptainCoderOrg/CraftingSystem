@@ -59,5 +59,16 @@ the UI Toolkit in play mode.
 * [Read More]({% link pages/04-day-4.md %})
 * [Watch On YouTube](https://youtube.com/live/N8lzDTX7_GM)
 
+## Day 5: Drag and Drop Grid
+{: .no_toc }
+
+Today we finished implementing the UI Toolkit tutorial to create
+a drag and drop inventory. Then, we refactored that implementation
+to be linked with a CraftingContainer such that it renders a grid
+with both valid and invalid positions.
+
+* [Read More]({% link pages/05-day-5.md %})
+* [Watch On YouTube](https://youtube.com/live/ifZe8YSKH_Y)
+
 
 {% include Links.md %}
