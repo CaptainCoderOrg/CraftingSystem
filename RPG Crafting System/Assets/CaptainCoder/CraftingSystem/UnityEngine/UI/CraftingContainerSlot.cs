@@ -57,7 +57,6 @@ public class CraftingContainerSlot : VisualElement
         {
             return;
         }
-        Debug.Log($"In pointer down: {Item}");
         Icon.image = null;
         CraftingContainerUIController.StartDrag(evt.position, this);
     }

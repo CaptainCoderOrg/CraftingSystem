@@ -51,10 +51,7 @@ public class CraftingContainerUIController : MonoBehaviour
                 OutputGridSlots[ix].ClearItem();
             }
             CraftingContainer.Clear();
-            foreach (CraftingContainerSlot slot in InputGridSlots)
-            {
-                slot.ForceUpdate();
-            }
+            ForceUpdate();
         }
     }
 
@@ -83,18 +80,29 @@ public class CraftingContainerUIController : MonoBehaviour
                 row.Inner.Add(slot);
             }
         }
+        CraftingContainer.TryAddItem((0, 1), Database.Wood);
+        CraftingContainer.TryAddItem((0, 2), Database.Wood);
+        CraftingContainer.TryAddItem((1, 1), Database.Wood);
+        CraftingContainer.TryAddItem((2, 1), Database.Rope);
+        ForceUpdate();
 
-        InputGridSlots[1].SetItem(Database.Boat);
 
         m_GhostIcon.RegisterCallback<PointerMoveEvent>(OnPointerMove);
         m_GhostIcon.RegisterCallback<PointerUpEvent>(OnPointerUp);
+    }
+
+    private void ForceUpdate()
+    {
+        foreach (CraftingContainerSlot slot in InputGridSlots)
+        {
+            slot.ForceUpdate();
+        }
     }
 
     public static void StartDrag(Vector2 position, CraftingContainerSlot originalSlot)
     {
         m_IsDragging = true;
         m_OriginalSlot = originalSlot;
-        Debug.Log($"In StartDrag: {m_OriginalSlot.Item}");
         m_GhostIcon.style.top = position.y - m_GhostIcon.layout.height / 2;
         m_GhostIcon.style.left = position.x - m_GhostIcon.layout.width / 2;
         m_GhostIcon.style.backgroundImage = originalSlot.Item.Sprite.texture;
@@ -123,7 +131,6 @@ public class CraftingContainerUIController : MonoBehaviour
         {
             CraftingContainerSlot closestSlot = slots.OrderBy(x => Vector2.Distance
                (x.worldBound.position, m_GhostIcon.worldBound.position)).First();
-            Debug.Log($"Before TryMove Item is: {m_OriginalSlot.Item}");
             if (CraftingContainer.TryMove(m_OriginalSlot.Position, closestSlot.Position))
             {
                 closestSlot.ForceUpdate();
