@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 2056
-    y: 51
-    width: 1390
-    height: 988
+    x: 2048
+    y: 43
+    width: 1920
+    height: 997
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Project
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 0
+  m_Maximized: 1
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -43,12 +43,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 1390
-    height: 938
+    width: 1920
+    height: 947
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 240
+  controlID: 111
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -64,18 +64,19 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 902
+    x: 1188
     y: 0
-    width: 488
-    height: 938
+    width: 732
+    height: 947
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 15}
+  m_ActualView: {fileID: 16}
   m_Panes:
-  - {fileID: 15}
   - {fileID: 12}
-  m_Selected: 0
-  m_LastSelected: 1
+  - {fileID: 16}
+  - {fileID: 13}
+  m_Selected: 1
+  m_LastSelected: 2
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -93,13 +94,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 211
-    height: 567
+    width: 279
+    height: 571
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 16}
+  m_ActualView: {fileID: 17}
   m_Panes:
-  - {fileID: 16}
+  - {fileID: 17}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &5
@@ -118,15 +119,15 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 567
-    width: 902
-    height: 371
-  m_MinSize: {x: 230, y: 250}
-  m_MaxSize: {x: 10000, y: 10000}
-  m_ActualView: {fileID: 14}
+    y: 571
+    width: 1188
+    height: 376
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 15}
   m_Panes:
-  - {fileID: 14}
-  - {fileID: 19}
+  - {fileID: 15}
+  - {fileID: 20}
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &6
@@ -149,8 +150,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1390
-    height: 988
+    width: 1920
+    height: 997
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -174,11 +175,11 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1390
+    width: 1920
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
-  m_LastLoadedLayoutName: Default
+  m_LastLoadedLayoutName: 
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -195,8 +196,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 968
-    width: 1390
+    y: 977
+    width: 1920
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -219,12 +220,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 902
-    height: 938
+    width: 1188
+    height: 947
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 241
+  controlID: 38
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -244,12 +245,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 902
-    height: 567
+    width: 1188
+    height: 571
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 232
+  controlID: 39
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -265,20 +266,64 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 211
+    x: 279
     y: 0
-    width: 691
-    height: 567
+    width: 909
+    height: 571
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 18}
+  m_ActualView: {fileID: 19}
   m_Panes:
-  - {fileID: 17}
   - {fileID: 18}
-  - {fileID: 13}
+  - {fileID: 19}
+  - {fileID: 14}
   m_Selected: 1
   m_LastSelected: 0
 --- !u!114 &12
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13961, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 275, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Rope
+    m_Image: {fileID: 2376468200823113483, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: Assets/Items/Rope.asset
+  m_Pos:
+    serializedVersion: 2
+    x: 2927
+    y: 256
+    width: 465
+    height: 735
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  m_ObjectsLockedBeforeSerialization: []
+  m_InstanceIDsLockedBeforeSerialization: 
+  m_PreviewResizer:
+    m_CachedPref: 151
+    m_ControlHash: 1412526313
+    m_PrefName: Preview_InspectorPreview
+  m_LastInspectedObjectInstanceID: 24534
+  m_LastVerticalScrollValue: 0
+  m_GlobalObjectId: GlobalObjectId_V1-3-fab854202c21a1e4c99015bdc8194df8-11400000-0
+  m_InspectorMode: 0
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -298,10 +343,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2955
-    y: 81
-    width: 490
-    height: 917
+    x: 2927
+    y: 466
+    width: 465
+    height: 525
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -313,12 +358,12 @@ MonoBehaviour:
     m_SaveData: []
     m_OverlaysVisible: 1
   m_Spl:
-    ID: 382
+    ID: 5880
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
-    - 635
-    - 212
+    - 341
+    - 114
     relativeSizes:
     - 0.75
     - 0.25
@@ -328,7 +373,7 @@ MonoBehaviour:
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 847
+    lastTotalSize: 455
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -373,14 +418,14 @@ MonoBehaviour:
       availableCategories: []
     m_SelectedOption: 0
   m_EditModeTestListGUI:
-    m_Window: {fileID: 12}
+    m_Window: {fileID: 13}
     m_NewResultList:
     - id: 1000
       uniqueId: '[RPG Crafting System][suite]'
       name: RPG Crafting System
       fullName: RPG Crafting System
       resultStatus: 1
-      duration: 0.2201629
+      duration: 0.1933655
       messages: 
       output: 
       stacktrace: 
@@ -396,7 +441,7 @@ MonoBehaviour:
       name: Tests.dll
       fullName: D:/git/CaptainCoderOrg/CraftingSystem/RPG Crafting System/Library/ScriptAssemblies/Tests.dll
       resultStatus: 1
-      duration: 0.1750852
+      duration: 0.1482266
       messages: 
       output: 
       stacktrace: 
@@ -412,7 +457,7 @@ MonoBehaviour:
       name: CaptainCoder
       fullName: CaptainCoder
       resultStatus: 1
-      duration: 0.16718
+      duration: 0.1389029
       messages: 
       output: 
       stacktrace: 
@@ -428,7 +473,7 @@ MonoBehaviour:
       name: CraftingSystem
       fullName: CaptainCoder.CraftingSystem
       resultStatus: 1
-      duration: 0.166802
+      duration: 0.1385353
       messages: 
       output: 
       stacktrace: 
@@ -444,7 +489,7 @@ MonoBehaviour:
       name: CraftingContainerTest
       fullName: CaptainCoder.CraftingSystem.CraftingContainerTest
       resultStatus: 1
-      duration: 0.1225658
+      duration: 0.1104009
       messages: 
       output: 
       stacktrace: 
@@ -460,7 +505,7 @@ MonoBehaviour:
       name: TestAddItemAtOccupied
       fullName: CaptainCoder.CraftingSystem.CraftingContainerTest.TestAddItemAtOccupied
       resultStatus: 1
-      duration: 0.0350574
+      duration: 0.0312756
       messages: 
       output: 
       stacktrace: 
@@ -478,7 +523,7 @@ MonoBehaviour:
       name: TestAddItemOutOfBounds
       fullName: CaptainCoder.CraftingSystem.CraftingContainerTest.TestAddItemOutOfBounds
       resultStatus: 1
-      duration: 0.0139778
+      duration: 0.0135374
       messages: 
       output: 
       stacktrace: 
@@ -494,7 +539,7 @@ MonoBehaviour:
       name: TestAddItemOutOfBounds(-2,-2)
       fullName: CaptainCoder.CraftingSystem.CraftingContainerTest.TestAddItemOutOfBounds(-2,-2)
       resultStatus: 1
-      duration: 0.0009304
+      duration: 0.0013551
       messages: 
       output: 
       stacktrace: 
@@ -511,7 +556,7 @@ MonoBehaviour:
       name: TestAddItemOutOfBounds(4,4)
       fullName: CaptainCoder.CraftingSystem.CraftingContainerTest.TestAddItemOutOfBounds(4,4)
       resultStatus: 1
-      duration: 0.000193
+      duration: 0.0003138
       messages: 
       output: 
       stacktrace: 
@@ -528,7 +573,7 @@ MonoBehaviour:
       name: TestAddItemOutOfBounds(-2,0)
       fullName: CaptainCoder.CraftingSystem.CraftingContainerTest.TestAddItemOutOfBounds(-2,0)
       resultStatus: 1
-      duration: 0.0001569
+      duration: 0.0002206
       messages: 
       output: 
       stacktrace: 
@@ -545,7 +590,7 @@ MonoBehaviour:
       name: TestAddItemOutOfBounds(0,4)
       fullName: CaptainCoder.CraftingSystem.CraftingContainerTest.TestAddItemOutOfBounds(0,4)
       resultStatus: 1
-      duration: 0.00016
+      duration: 0.000156
       messages: 
       output: 
       stacktrace: 
@@ -562,7 +607,7 @@ MonoBehaviour:
       name: TestAddItemOutOfBounds(0,0)
       fullName: CaptainCoder.CraftingSystem.CraftingContainerTest.TestAddItemOutOfBounds(0,0)
       resultStatus: 1
-      duration: 0.0002149
+      duration: 0.0002007
       messages: 
       output: 
       stacktrace: 
@@ -579,7 +624,7 @@ MonoBehaviour:
       name: TestAddItemOutOfBounds(3,0)
       fullName: CaptainCoder.CraftingSystem.CraftingContainerTest.TestAddItemOutOfBounds(3,0)
       resultStatus: 1
-      duration: 0.0001614
+      duration: 0.0006043
       messages: 
       output: 
       stacktrace: 
@@ -596,7 +641,7 @@ MonoBehaviour:
       name: TestAddItemOutOfBounds(3,3)
       fullName: CaptainCoder.CraftingSystem.CraftingContainerTest.TestAddItemOutOfBounds(3,3)
       resultStatus: 1
-      duration: 0.0001601
+      duration: 0.0004453
       messages: 
       output: 
       stacktrace: 
@@ -613,7 +658,7 @@ MonoBehaviour:
       name: TestAddItemOutOfBounds(0,3)
       fullName: CaptainCoder.CraftingSystem.CraftingContainerTest.TestAddItemOutOfBounds(0,3)
       resultStatus: 1
-      duration: 0.0001578
+      duration: 0.0001848
       messages: 
       output: 
       stacktrace: 
@@ -630,7 +675,7 @@ MonoBehaviour:
       name: TestAddMultipleItems
       fullName: CaptainCoder.CraftingSystem.CraftingContainerTest.TestAddMultipleItems
       resultStatus: 1
-      duration: 0.0171119
+      duration: 0.0138046
       messages: 
       output: 
       stacktrace: 
@@ -647,7 +692,7 @@ MonoBehaviour:
       name: TestAddOneItem
       fullName: CaptainCoder.CraftingSystem.CraftingContainerTest.TestAddOneItem
       resultStatus: 1
-      duration: 0.0052801
+      duration: 0.0048132
       messages: 
       output: 
       stacktrace: 
@@ -664,7 +709,7 @@ MonoBehaviour:
       name: TestConstructor2x3
       fullName: CaptainCoder.CraftingSystem.CraftingContainerTest.TestConstructor2x3
       resultStatus: 1
-      duration: 0.0021574
+      duration: 0.0013827
       messages: 
       output: 
       stacktrace: 
@@ -681,7 +726,7 @@ MonoBehaviour:
       name: TestMoveItemEmpty
       fullName: CaptainCoder.CraftingSystem.CraftingContainerTest.TestMoveItemEmpty
       resultStatus: 1
-      duration: 0.0024176
+      duration: 0.0019356
       messages: 
       output: 
       stacktrace: 
@@ -698,7 +743,7 @@ MonoBehaviour:
       name: TestMoveItemInvalid
       fullName: CaptainCoder.CraftingSystem.CraftingContainerTest.TestMoveItemInvalid
       resultStatus: 1
-      duration: 0.0114192
+      duration: 0.0109724
       messages: 
       output: 
       stacktrace: 
@@ -714,7 +759,7 @@ MonoBehaviour:
       name: TestMoveItemInvalid(0,0)
       fullName: CaptainCoder.CraftingSystem.CraftingContainerTest.TestMoveItemInvalid(0,0)
       resultStatus: 1
-      duration: 0.0006024
+      duration: 0.0008134
       messages: 
       output: 
       stacktrace: 
@@ -731,7 +776,7 @@ MonoBehaviour:
       name: TestMoveItemInvalid(3,0)
       fullName: CaptainCoder.CraftingSystem.CraftingContainerTest.TestMoveItemInvalid(3,0)
       resultStatus: 1
-      duration: 0.000135
+      duration: 0.0002385
       messages: 
       output: 
       stacktrace: 
@@ -748,7 +793,7 @@ MonoBehaviour:
       name: TestMoveItemInvalid(3,3)
       fullName: CaptainCoder.CraftingSystem.CraftingContainerTest.TestMoveItemInvalid(3,3)
       resultStatus: 1
-      duration: 0.0001187
+      duration: 0.0001571
       messages: 
       output: 
       stacktrace: 
@@ -765,7 +810,7 @@ MonoBehaviour:
       name: TestMoveItemInvalid(0,3)
       fullName: CaptainCoder.CraftingSystem.CraftingContainerTest.TestMoveItemInvalid(0,3)
       resultStatus: 1
-      duration: 0.0001268
+      duration: 0.0001665
       messages: 
       output: 
       stacktrace: 
@@ -782,7 +827,7 @@ MonoBehaviour:
       name: TestMoveItemInvalid(-1,0)
       fullName: CaptainCoder.CraftingSystem.CraftingContainerTest.TestMoveItemInvalid(-1,0)
       resultStatus: 1
-      duration: 0.0001145
+      duration: 0.0003046
       messages: 
       output: 
       stacktrace: 
@@ -799,7 +844,7 @@ MonoBehaviour:
       name: TestMoveItemInvalid(-2,-2)
       fullName: CaptainCoder.CraftingSystem.CraftingContainerTest.TestMoveItemInvalid(-2,-2)
       resultStatus: 1
-      duration: 0.0001127
+      duration: 0.0003098
       messages: 
       output: 
       stacktrace: 
@@ -816,7 +861,7 @@ MonoBehaviour:
       name: TestMoveItemInvalid(4,0)
       fullName: CaptainCoder.CraftingSystem.CraftingContainerTest.TestMoveItemInvalid(4,0)
       resultStatus: 1
-      duration: 0.0001187
+      duration: 0.0002741
       messages: 
       output: 
       stacktrace: 
@@ -833,7 +878,7 @@ MonoBehaviour:
       name: TestMoveItemInvalid(0,4)
       fullName: CaptainCoder.CraftingSystem.CraftingContainerTest.TestMoveItemInvalid(0,4)
       resultStatus: 1
-      duration: 0.0001176
+      duration: 0.0002485
       messages: 
       output: 
       stacktrace: 
@@ -850,7 +895,7 @@ MonoBehaviour:
       name: TestMoveItemInvalid(4,4)
       fullName: CaptainCoder.CraftingSystem.CraftingContainerTest.TestMoveItemInvalid(4,4)
       resultStatus: 1
-      duration: 0.0001285
+      duration: 0.00029
       messages: 
       output: 
       stacktrace: 
@@ -867,7 +912,7 @@ MonoBehaviour:
       name: TestMoveSwapItems
       fullName: CaptainCoder.CraftingSystem.CraftingContainerTest.TestMoveSwapItems
       resultStatus: 1
-      duration: 0.0006744
+      duration: 0.0008959
       messages: 
       output: 
       stacktrace: 
@@ -884,7 +929,7 @@ MonoBehaviour:
       name: TestTryRemove
       fullName: CaptainCoder.CraftingSystem.CraftingContainerTest.TestTryRemove
       resultStatus: 1
-      duration: 0.0076353
+      duration: 0.008734
       messages: 
       output: 
       stacktrace: 
@@ -900,7 +945,7 @@ MonoBehaviour:
       name: TestTryRemove(0,0)
       fullName: CaptainCoder.CraftingSystem.CraftingContainerTest.TestTryRemove(0,0)
       resultStatus: 1
-      duration: 0.0012028
+      duration: 0.0010325
       messages: 
       output: 
       stacktrace: 
@@ -917,7 +962,7 @@ MonoBehaviour:
       name: TestTryRemove(0,1)
       fullName: CaptainCoder.CraftingSystem.CraftingContainerTest.TestTryRemove(0,1)
       resultStatus: 1
-      duration: 0.0002573
+      duration: 0.000581
       messages: 
       output: 
       stacktrace: 
@@ -934,7 +979,7 @@ MonoBehaviour:
       name: TestTryRemove(1,2)
       fullName: CaptainCoder.CraftingSystem.CraftingContainerTest.TestTryRemove(1,2)
       resultStatus: 1
-      duration: 0.0001367
+      duration: 0.0001921
       messages: 
       output: 
       stacktrace: 
@@ -951,7 +996,7 @@ MonoBehaviour:
       name: RecipeDatabaseTest
       fullName: CaptainCoder.CraftingSystem.RecipeDatabaseTest
       resultStatus: 1
-      duration: 0.0260979
+      duration: 0.013488
       messages: 
       output: 
       stacktrace: 
@@ -967,7 +1012,7 @@ MonoBehaviour:
       name: TestRecipeEntryEquality
       fullName: CaptainCoder.CraftingSystem.RecipeDatabaseTest.TestRecipeEntryEquality
       resultStatus: 1
-      duration: 0.0073806
+      duration: 0.004801
       messages: 
       output: 
       stacktrace: 
@@ -984,7 +1029,7 @@ MonoBehaviour:
       name: TestTryGetRecipe
       fullName: CaptainCoder.CraftingSystem.RecipeDatabaseTest.TestTryGetRecipe
       resultStatus: 1
-      duration: 0.0108255
+      duration: 0.0034153
       messages: 
       output: 
       stacktrace: 
@@ -1001,7 +1046,7 @@ MonoBehaviour:
       name: ShapelessRecipeTest
       fullName: CaptainCoder.CraftingSystem.ShapelessRecipeTest
       resultStatus: 1
-      duration: 0.013268
+      duration: 0.0106464
       messages: 
       output: 
       stacktrace: 
@@ -1017,7 +1062,7 @@ MonoBehaviour:
       name: TestConstructorWithBoatDeconstructRecipe
       fullName: CaptainCoder.CraftingSystem.ShapelessRecipeTest.TestConstructorWithBoatDeconstructRecipe
       resultStatus: 1
-      duration: 0.0048029
+      duration: 0.0034414
       messages: 
       output: 
       stacktrace: 
@@ -1034,7 +1079,7 @@ MonoBehaviour:
       name: TestConstructorWithBoatRecipe
       fullName: CaptainCoder.CraftingSystem.ShapelessRecipeTest.TestConstructorWithBoatRecipe
       resultStatus: 1
-      duration: 0.001258
+      duration: 0.0015268
       messages: 
       output: 
       stacktrace: 
@@ -1051,7 +1096,7 @@ MonoBehaviour:
       name: ExampleTest
       fullName: ExampleTest
       resultStatus: 1
-      duration: 0.0064308
+      duration: 0.0078275
       messages: 
       output: 
       stacktrace: 
@@ -1067,7 +1112,7 @@ MonoBehaviour:
       name: ExampleTestSimplePasses
       fullName: ExampleTest.ExampleTestSimplePasses
       resultStatus: 1
-      duration: 0.0010693
+      duration: 0.0010353
       messages: 
       output: 
       stacktrace: 
@@ -1079,13 +1124,13 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1001
       parentUniqueId: Tests.dll/[Tests][ExampleTest][suite]
-    m_ResultText: TestTryGetRecipe (0.011s)
+    m_ResultText: TestTryGetRecipe (0.003s)
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 8f5b1a23
       m_LastClickedID: 588929935
-      m_ExpandedIDs: e3c011f7e557abf703e890fa6d36de433e74764e7b0df34f55e4445ce6596f7affffff7f
+      m_ExpandedIDs: e3c011f7e557abf703e890fa6c7d293f6d36de433e74764e7b0df34f55e4445ce6596f7affffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1111,7 +1156,7 @@ MonoBehaviour:
       selectedCategoryMask: 0
       availableCategories:
       - Uncategorized
---- !u!114 &13
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1145,7 +1190,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
---- !u!114 &14
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1165,10 +1210,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2056
-    y: 648
-    width: 901
-    height: 350
+    x: 2048
+    y: 644
+    width: 1187
+    height: 355
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1192,23 +1237,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Crafting
+    - Assets/Crafting/Recipes
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Crafting
+  - Assets/Crafting/Recipes
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\git\CaptainCoderOrg\CraftingSystem\RPG Crafting System
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 1e600000
-    m_LastClickedID: 24606
-    m_ExpandedIDs: 000000000e60000016600000de60000000ca9a3b
+    m_SelectedIDs: 7c600000
+    m_LastClickedID: 24700
+    m_ExpandedIDs: 000000005c600000686000006a60000074600000246c0000766c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1236,7 +1281,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000e60000000ca9a3b
+    m_ExpandedIDs: 000000005c6000005e600000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1261,24 +1306,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 76cdffff
-    m_LastClickedInstanceID: -12938
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c623000022620000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: CraftingContainerUIController
-      m_OriginalName: CraftingContainerUIController
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 25436
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 5}
     m_CreateAssetUtility:
@@ -1291,8 +1336,8 @@ MonoBehaviour:
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 16
   m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 178
---- !u!114 &15
+  m_DirectoriesAreaWidth: 345
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1312,10 +1357,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2958
-    y: 81
-    width: 487
-    height: 917
+    x: 3236
+    y: 73
+    width: 731
+    height: 926
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1332,14 +1377,14 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -12938
+  m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &16
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1359,10 +1404,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2056
-    y: 81
-    width: 210
-    height: 546
+    x: 2048
+    y: 73
+    width: 278
+    height: 550
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1376,9 +1421,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 76cdffff
+      m_SelectedIDs: 02220000
       m_LastClickedID: 0
-      m_ExpandedIDs: 50d1ffffe6d1ffffc0d5ffff74d7ffffc0dcffffc0e0ffff0ae2ffffb4e3ffff58eeffffc6efffffa2f0ffffccf2ffff3cf5ffff26f7ffff
+      m_ExpandedIDs: 40f8ffffd6f8ffff1cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1402,7 +1447,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: c9823eafe6b29ec4c99c26d25dc64848
---- !u!114 &17
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1422,10 +1467,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2285
+    x: 2267
     y: 81
-    width: 736
-    height: 546
+    width: 689
+    height: 541
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1837,7 +1882,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &18
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1857,10 +1902,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2267
-    y: 81
-    width: 689
-    height: 546
+    x: 2327
+    y: 73
+    width: 907
+    height: 550
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1877,7 +1922,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 689, y: 388}
+  m_TargetSize: {x: 1920, y: 1080}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -1886,16 +1931,16 @@ MonoBehaviour:
   m_VSyncEnabled: 0
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 01000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 03000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -344.5
-    m_HBaseRangeMax: 344.5
-    m_VBaseRangeMin: -194
-    m_VBaseRangeMax: 194
+    m_HBaseRangeMin: -960
+    m_HBaseRangeMax: 960
+    m_VBaseRangeMin: -540
+    m_VBaseRangeMax: 540
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1913,29 +1958,29 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 689
-      height: 525
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 344.5, y: 262.5}
+      width: 907
+      height: 529
+    m_Scale: {x: 0.47239584, y: 0.47239584}
+    m_Translation: {x: 453.5, y: 264.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -344.5
-      y: -262.5
-      width: 689
-      height: 525
+      x: -960
+      y: -559.9118
+      width: 1920
+      height: 1119.8236
     m_MinimalGUI: 1
-  m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 689, y: 546}
+  m_defaultScale: 0.47239584
+  m_LastWindowPixelSize: {x: 907, y: 550}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &19
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1955,10 +2000,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2056
-    y: 648
-    width: 943
-    height: 350
+    x: 2048
+    y: 644
+    width: 1187
+    height: 355
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
