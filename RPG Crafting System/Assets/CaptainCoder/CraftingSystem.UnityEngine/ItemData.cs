@@ -4,7 +4,7 @@ namespace CaptainCoder.CraftingSystem.UnityEngine
 {
     [System.Serializable]
     [CreateAssetMenu(fileName = "Item", menuName = "Crafting/Item", order = 0)]
-    public class ItemData : ScriptableObject, IItem
+    public class ItemData : ScriptableObject
     {
         [SerializeField]
         private string _name;

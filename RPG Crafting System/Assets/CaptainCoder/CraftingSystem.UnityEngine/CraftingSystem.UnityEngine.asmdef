@@ -9,7 +9,8 @@
     "allowUnsafeCode": false,
     "overrideReferences": true,
     "precompiledReferences": [
-        "CaptainCoder.dll"
+        "CaptainCoder.dll",
+        "CaptainCoder.CraftingSystem.dll"
     ],
     "autoReferenced": true,
     "defineConstraints": [],

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace CaptainCoder.CraftingSystem.UnityEngine
 {
-    public class CraftingContainerData<T> : ScriptableObject, ICraftingContainer<T>.IAdapter where T : IItem
+    public class CraftingContainerData<T> : ScriptableObject, ICraftingContainer<T>.IAdapter
     {
         [field: SerializeField]
         public string Name { get; private set; }
