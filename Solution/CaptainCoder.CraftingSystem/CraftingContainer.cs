@@ -41,13 +41,13 @@ public class CraftingContainer<T> : ICraftingContainer<T>
     /// </summary>
     public bool TryAddItem(Position position, T item)
     {
-        if (position.Row < 0 || position.Col < 0 || position.Row >= Rows || position.Col >= Columns) { return false; }
-        if (InvalidPositions.Contains(position)) { return false; }
+        if (!IsValidPosition(position)) { return false; }
         return _grid.TryAdd(position, item); // returns false if position is already set
     }
 
     public bool TryMove(Position from, Position to)
     {
+        if (!IsValidPosition(from) || !IsValidPosition(to)) { return false; }
         // At least ONE position must have something
         if (!_grid.ContainsKey(from) && !_grid.ContainsKey(to)) { return false; }
         // At this point, at least ONE position is occupied
@@ -83,4 +83,10 @@ public class CraftingContainer<T> : ICraftingContainer<T>
     public bool TryItemAt(Position position, out T result) => _grid.TryGetValue(position, out result);
     public T ItemAt(Position position) => _grid[position];
     public bool HasItemAt(Position position) => _grid.ContainsKey(position);
+    public bool IsValidPosition(Position position)
+    {
+        if (position.Row < 0 || position.Col < 0 || position.Row >= Rows || position.Col >= Columns) { return false; }
+        if (InvalidPositions.Contains(position)) { return false; }
+        return true;
+    }
 }

@@ -134,8 +134,8 @@ public class CraftingContainerTest
     [TestCase(4, 4)]
     public void TestMoveItemInvalid(int row, int col)
     {
-        _cc4x4WithNoCorners.TryAddItem((1, 1), Boot);
-        Assert.True(_cc4x4WithNoCorners.TryMove((1, 1), (row, col)));
+        _cc4x4WithNoCorners.TryAddItem(new Position(1, 1), Boot);
+        Assert.False(_cc4x4WithNoCorners.TryMove(new Position(1, 1), (row, col)));
     }
 
     [Test, Timeout(5000), Description("Tests swapping items using Move")]
