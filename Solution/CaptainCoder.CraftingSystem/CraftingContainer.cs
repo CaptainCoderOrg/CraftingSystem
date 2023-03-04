@@ -89,4 +89,5 @@ public class CraftingContainer<T> : ICraftingContainer<T>
         if (InvalidPositions.Contains(position)) { return false; }
         return true;
     }
+    public void Clear() => _grid.Clear();
 }

@@ -15,6 +15,7 @@ public interface ICraftingContainer<T>
     public bool TryAddItem(Position position, T item);
     public bool TryMove(Position from, Position to);
     public bool TryRemove(Position position, out T removed);
+    public void Clear();
     public bool TryItemAt(Position position, out T result);
     public T ItemAt(Position position);
     public bool HasItemAt(Position position);
@@ -34,5 +35,6 @@ public interface ICraftingContainer<T>
         bool ICraftingContainer<T>.TryItemAt(Position position, out T result) => CraftingContainer.TryItemAt(position, out result);
         T ICraftingContainer<T>.ItemAt(Position position) => CraftingContainer.ItemAt(position);
         bool ICraftingContainer<T>.HasItemAt(Position position) => CraftingContainer.HasItemAt(position);
+        void ICraftingContainer<T>.Clear() => CraftingContainer.Clear();
     }
 }

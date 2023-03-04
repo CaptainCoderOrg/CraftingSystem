@@ -19,9 +19,5 @@ MonoBehaviour:
   _invalidPositions:
   - Row: 0
     Col: 0
-  - Row: 1
-    Col: 0
-  - Row: 2
-    Col: 0
-  - Row: 3
-    Col: 0
+  - Row: 0
+    Col: 2
