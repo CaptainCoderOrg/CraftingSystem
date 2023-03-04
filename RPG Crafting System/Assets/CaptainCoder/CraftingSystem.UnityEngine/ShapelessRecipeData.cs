@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace CaptainCoder.CraftingSystem.UnityEngine
 {
-    public class ShapelessRecipeData<T> : ScriptableObject, IShapelessRecipe<T> where T : IItem
+    public class ShapelessRecipeData<T> : ScriptableObject, IShapelessRecipe<T>.IAdapter where T : IItem
     {
         [field: SerializeField]
         public List<T> Ingredients { get; private set; }
@@ -11,11 +11,7 @@ namespace CaptainCoder.CraftingSystem.UnityEngine
         public CraftingCategoryData Category { get; private set; }
         [field: SerializeField]
         public List<T> Results { get; private set; }
-        
-        public ShapelessRecipe<T> AsRecipe => new (Ingredients, Category, Results);
-
-        IEnumerable<T> IShapelessRecipe<T>.Ingredients => Ingredients;
-        IEnumerable<T> IShapelessRecipe<T>.Result => Results;
-        ICraftingCategory IShapelessRecipe<T>.Category => Category;
+        private IShapelessRecipe<T> _recipe;
+        public IShapelessRecipe<T> RecipeDelegate => _recipe ??= new ShapelessRecipe<T>(Ingredients, Category, Results);
     }
 }

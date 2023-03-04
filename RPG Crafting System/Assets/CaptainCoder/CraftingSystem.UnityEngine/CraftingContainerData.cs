@@ -5,25 +5,8 @@ using System.Linq;
 
 namespace CaptainCoder.CraftingSystem.UnityEngine
 {
-    public class CraftingContainerData<T> : ScriptableObject, ICraftingContainer<T> where T : IItem
+    public class CraftingContainerData<T> : ScriptableObject, ICraftingContainer<T>.IAdapter where T : IItem
     {
-        private ICraftingContainer<T> _delegate;
-        private ICraftingContainer<T> Delegate
-        {
-            get
-            {
-                if (_delegate == null)
-                {
-                    _delegate = new CraftingContainer<T>(
-                        _rows, 
-                        _cols, 
-                        _craftingCategory, 
-                        _invalidPositions.Select(pos => new Position(pos.Row, pos.Col)));
-                }
-                return _delegate;
-            }
-        }
-
         [field: SerializeField]
         public string Name { get; private set; }
         [SerializeField]
@@ -33,26 +16,26 @@ namespace CaptainCoder.CraftingSystem.UnityEngine
         [SerializeField]
         private CraftingCategoryData _craftingCategory;
         [SerializeField]
-        private List<InvalidPosition> _invalidPositions;
-        public int Rows => Delegate.Rows;
-        public int Columns => Delegate.Columns;
-        public HashSet<ICraftingCategory> Categories => Delegate.Categories;
-        public HashSet<Position> InvalidPositions => Delegate.InvalidPositions;
-        public IEnumerable<(Position, T)> Positions => Delegate.Positions;
-        public bool HasItemAt(Position position) => Delegate.HasItemAt(position);
-        public T ItemAt(Position position) => Delegate.ItemAt(position);
-        public bool TryAddItem(Position position, T item) => Delegate.TryAddItem(position, item);
-        public bool TryItemAt(Position position, out T result) => Delegate.TryItemAt(position, out result);
-        public bool TryMove(Position from, Position to) => Delegate.TryMove(from, to);
-        public bool TryRemove(Position position, out T removed) => Delegate.TryRemove(position, out removed);
+        private List<MutablePosition> _invalidPositions;
 
-        [System.Serializable]
-        internal struct InvalidPosition
+        #region CraftingContainerDelegate
+        private ICraftingContainer<T> _delegate;
+        public ICraftingContainer<T> CraftingContainerDelegate
         {
-            public int Row;
-            public int Col;
+            get
+            {
+                if (_delegate == null)
+                {
+                    _delegate = new CraftingContainer<T>(
+                        Name,
+                        _rows,
+                        _cols,
+                        _craftingCategory,
+                        _invalidPositions.Freeze());
+                }
+                return _delegate;
+            }
+            #endregion
         }
     }
-
-
 }

@@ -12,20 +12,21 @@ namespace CaptainCoder.CraftingSystem
         private readonly HashSet<Position> _invalidPositions;
         private readonly HashSet<ICraftingCategory> _categories;
 
-        public CraftingContainer(int rows, int columns, ICraftingCategory category, IEnumerable<Position> invalidPositions = null)
-            : this(rows, columns, new[] { category }, invalidPositions) { }
+        public CraftingContainer(string name, int rows, int columns, ICraftingCategory category, IEnumerable<Position> invalidPositions = null)
+            : this(name, rows, columns, new[] { category }, invalidPositions) { }
 
-        public CraftingContainer(int rows, int columns, IEnumerable<ICraftingCategory> categories, IEnumerable<Position> invalidPositions = null)
+        public CraftingContainer(string name, int rows, int columns, IEnumerable<ICraftingCategory> categories, IEnumerable<Position> invalidPositions = null)
         {
             if (columns < 1 || rows < 1) { throw new ArgumentException($"Invalid CraftingContainer size columns: {columns}, rows: {rows}"); };
             if (!categories.Any(_ => true)) { throw new ArgumentException($"CraftingContainer requires at least one {nameof(ICraftingCategory)}."); }
+            Name = name;
             Rows = rows;
             Columns = columns;
             _invalidPositions = invalidPositions == null ? new HashSet<Position>() : invalidPositions.ToHashSet();
             _categories = categories.ToHashSet();
             _grid = new Dictionary<Position, T>();
         }
-
+        public string Name { get; }
         public int Rows { get; }
         public int Columns { get; }
         public HashSet<ICraftingCategory> Categories => _categories.ToHashSet();

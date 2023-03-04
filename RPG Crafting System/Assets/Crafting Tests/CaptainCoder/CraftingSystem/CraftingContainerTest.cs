@@ -23,7 +23,7 @@ namespace CaptainCoder.CraftingSystem
               . . . 
               . . .
             */
-            _cc2x3WoodWork = new (2, 3, new CraftingCategory("Wood Work"));
+            _cc2x3WoodWork = new ("Workbench", 2, 3, new CraftingCategory("Wood Work"));
 
             /*
                . .
@@ -31,7 +31,9 @@ namespace CaptainCoder.CraftingSystem
              . . . .
                . .
             */
-            _cc4x4WithNoCorners = new (4, 4, 
+            _cc4x4WithNoCorners = new (
+                "Oven",
+                4, 4, 
                 new ICraftingCategory[]{new CraftingCategory("Simple Food"), new CraftingCategory("Advanced Food")},
                 new Position[]{(0,0), (0,3), (3,0), (3,3) }
                 );

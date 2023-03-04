@@ -9,10 +9,11 @@ namespace CaptainCoder.CraftingSystem.UnityEngine
 {
     public class CraftingContainerUIController : MonoBehaviour
     {
+        [SerializeField]
+        private CraftingContainerData<ItemData> _craftingContainer;
+        public ICraftingContainer<ItemData> CraftingContainer  => _craftingContainer;
         [field: SerializeField]
-        public ItemDatabase Database { get; private set; }
-        [field: SerializeField]
-        public CraftingContainerData<ItemData> CraftingContainer { get; private set; }
+        public ItemDatabase Database { get; private set; }        
         public List<GridSlot> GridSlots = new();
         private VisualElement m_Root;
         private VisualElement m_SlotContainer;
