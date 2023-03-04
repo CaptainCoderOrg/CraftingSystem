@@ -1,7 +1,7 @@
 using System;
 namespace CaptainCoder.CraftingSystem
 {
-    public readonly struct CraftingCategory : ICraftingCategory
+    public class CraftingCategory : ICraftingCategory
     {
         public string Name { get; }
         public CraftingCategory(string name)
@@ -16,5 +16,5 @@ namespace CaptainCoder.CraftingSystem
         }
 
         public override int GetHashCode() => HashCode.Combine(Name);
-    } 
+    }
 }

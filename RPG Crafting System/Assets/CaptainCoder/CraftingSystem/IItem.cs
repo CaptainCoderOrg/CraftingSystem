@@ -1,4 +1,3 @@
-
 namespace CaptainCoder.CraftingSystem
 {
     public interface IItem

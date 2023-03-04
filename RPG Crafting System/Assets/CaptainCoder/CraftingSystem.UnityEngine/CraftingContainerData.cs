@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using CaptainCoder.Core;
 using UnityEngine;
-using System.Linq;
 
 namespace CaptainCoder.CraftingSystem.UnityEngine
 {
@@ -20,7 +19,7 @@ namespace CaptainCoder.CraftingSystem.UnityEngine
 
         #region CraftingContainerDelegate
         private ICraftingContainer<T> _delegate;
-        public ICraftingContainer<T> CraftingContainerDelegate
+        public ICraftingContainer<T> CraftingContainer
         {
             get
             {

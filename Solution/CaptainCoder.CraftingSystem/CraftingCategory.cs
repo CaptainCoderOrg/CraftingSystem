@@ -1,0 +1,1 @@
+ public record CraftingCategory(string Name) : ICraftingCategory;

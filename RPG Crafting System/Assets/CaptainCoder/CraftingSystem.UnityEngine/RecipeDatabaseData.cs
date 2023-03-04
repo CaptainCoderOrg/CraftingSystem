@@ -7,6 +7,5 @@ namespace CaptainCoder.CraftingSystem.UnityEngine
     {
         [SerializeField]
         private List<GameRecipeData> _recipes;
-        
     }
 }

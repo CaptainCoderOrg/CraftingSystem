@@ -1,8 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System;
-
 namespace CaptainCoder.CraftingSystem
 {
     public class ShapelessRecipe<T> : IShapelessRecipe<T> where T : IItem

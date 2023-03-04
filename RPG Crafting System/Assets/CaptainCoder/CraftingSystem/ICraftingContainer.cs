@@ -1,9 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using CaptainCoder.Core;
-using System.Diagnostics;
-using System;
-using System.Linq;
 namespace CaptainCoder.CraftingSystem
 {
     public interface ICraftingContainer<T> where T : IItem
@@ -29,22 +25,19 @@ namespace CaptainCoder.CraftingSystem
 
         public interface IAdapter : ICraftingContainer<T>
         {
-            public ICraftingContainer<T> CraftingContainerDelegate { get; }
-            string ICraftingContainer<T>.Name => CraftingContainerDelegate.Name;
-            int ICraftingContainer<T>.Rows => CraftingContainerDelegate.Rows;
-            int ICraftingContainer<T>.Columns => CraftingContainerDelegate.Columns;
-            HashSet<ICraftingCategory> ICraftingContainer<T>.Categories => CraftingContainerDelegate.Categories;
-            HashSet<Position> ICraftingContainer<T>.InvalidPositions => CraftingContainerDelegate.InvalidPositions;
-            IEnumerable<(Position, T)> ICraftingContainer<T>.Positions => CraftingContainerDelegate.Positions;
-            bool ICraftingContainer<T>.TryAddItem(Position position, T item) => CraftingContainerDelegate.TryAddItem(position, item);
-            bool ICraftingContainer<T>.TryMove(Position from, Position to) => CraftingContainerDelegate.TryMove(from, to);
-            bool ICraftingContainer<T>.TryRemove(Position position, out T removed) => CraftingContainerDelegate.TryRemove(position, out removed);
-            bool ICraftingContainer<T>.TryItemAt(Position position, out T result) => CraftingContainerDelegate.TryItemAt(position, out result);
-            T ICraftingContainer<T>.ItemAt(Position position) => CraftingContainerDelegate.ItemAt(position);
-            bool ICraftingContainer<T>.HasItemAt(Position position) => CraftingContainerDelegate.HasItemAt(position);
-
+            public ICraftingContainer<T> CraftingContainer { get; }
+            string ICraftingContainer<T>.Name => CraftingContainer.Name;
+            int ICraftingContainer<T>.Rows => CraftingContainer.Rows;
+            int ICraftingContainer<T>.Columns => CraftingContainer.Columns;
+            HashSet<ICraftingCategory> ICraftingContainer<T>.Categories => CraftingContainer.Categories;
+            HashSet<Position> ICraftingContainer<T>.InvalidPositions => CraftingContainer.InvalidPositions;
+            IEnumerable<(Position, T)> ICraftingContainer<T>.Positions => CraftingContainer.Positions;
+            bool ICraftingContainer<T>.TryAddItem(Position position, T item) => CraftingContainer.TryAddItem(position, item);
+            bool ICraftingContainer<T>.TryMove(Position from, Position to) => CraftingContainer.TryMove(from, to);
+            bool ICraftingContainer<T>.TryRemove(Position position, out T removed) => CraftingContainer.TryRemove(position, out removed);
+            bool ICraftingContainer<T>.TryItemAt(Position position, out T result) => CraftingContainer.TryItemAt(position, out result);
+            T ICraftingContainer<T>.ItemAt(Position position) => CraftingContainer.ItemAt(position);
+            bool ICraftingContainer<T>.HasItemAt(Position position) => CraftingContainer.HasItemAt(position);
         }
     }
-
-
 }

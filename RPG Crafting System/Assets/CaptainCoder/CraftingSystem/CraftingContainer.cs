@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using CaptainCoder.Core;
-using System.Diagnostics;
 using System;
 using System.Linq;
 namespace CaptainCoder.CraftingSystem

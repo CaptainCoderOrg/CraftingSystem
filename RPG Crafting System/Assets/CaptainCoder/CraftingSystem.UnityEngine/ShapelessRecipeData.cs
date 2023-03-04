@@ -12,6 +12,6 @@ namespace CaptainCoder.CraftingSystem.UnityEngine
         [field: SerializeField]
         public List<T> Results { get; private set; }
         private IShapelessRecipe<T> _recipe;
-        public IShapelessRecipe<T> RecipeDelegate => _recipe ??= new ShapelessRecipe<T>(Ingredients, Category, Results);
+        public IShapelessRecipe<T> ShapelessRecipe => _recipe ??= new ShapelessRecipe<T>(Ingredients, Category, Results);
     }
 }
