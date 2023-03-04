@@ -82,8 +82,9 @@ public class CraftingContainerUIController : MonoBehaviour
         }
         CraftingContainer.TryAddItem((0, 1), Database.Wood);
         CraftingContainer.TryAddItem((0, 2), Database.Wood);
-        CraftingContainer.TryAddItem((1, 1), Database.Wood);
+        // CraftingContainer.TryAddItem((1, 1), Database.Wood);
         CraftingContainer.TryAddItem((2, 1), Database.Rope);
+        // CraftingContainer.TryAddItem((2, 1), Database.Boat);
         ForceUpdate();
 
 
