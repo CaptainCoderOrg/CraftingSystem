@@ -18,4 +18,6 @@ MonoBehaviour:
   <Recipes>k__BackingField:
   - {fileID: 11400000, guid: e8d0623c891fe3947bed69f45858cd07, type: 2}
   - {fileID: 11400000, guid: 33a0ab80d76026145bc25a2983bc39ad, type: 2}
+  - {fileID: 11400000, guid: 204a7063c3e6be84d92d2691d9cb3541, type: 2}
   - {fileID: 11400000, guid: e7b0cc2ce1f89c44e94b5635741fc5e5, type: 2}
+  <ScanForRecipes>k__BackingField: 0
