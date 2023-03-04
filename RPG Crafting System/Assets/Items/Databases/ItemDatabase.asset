@@ -15,3 +15,6 @@ MonoBehaviour:
   <Boat>k__BackingField: {fileID: 11400000, guid: 720fe89a948fdcb4f8ae462e9ec6f51d, type: 2}
   <Rope>k__BackingField: {fileID: 11400000, guid: fab854202c21a1e4c99015bdc8194df8, type: 2}
   <Wood>k__BackingField: {fileID: 11400000, guid: e8c594e2d3306744086446b70c5b87ce, type: 2}
+  <Recipes>k__BackingField:
+  - {fileID: 11400000, guid: e8d0623c891fe3947bed69f45858cd07, type: 2}
+  - {fileID: 11400000, guid: 33a0ab80d76026145bc25a2983bc39ad, type: 2}

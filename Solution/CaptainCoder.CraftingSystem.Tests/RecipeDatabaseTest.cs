@@ -44,7 +44,7 @@ public class RecipeDatabaseTest
         ShapelessRecipe<string>[] recipes = new[] { boatRecipe, ropeRecipe };
         RecipeDatabase<string> database = new(recipes);
 
-        Assert.True(database.TryGetRecipe(boatIngredients, woodWorkCategory, out IShapelessRecipe<string> actual));
+        Assert.True(database.TryGetRecipe(boatIngredients, woodWorkCategory, out IShapelessRecipe<string>? actual));
         Assert.AreEqual(boatRecipe, actual);
 
         Assert.False(database.TryGetRecipe(boatIngredients, sewingCategory, out _));

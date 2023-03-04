@@ -70,7 +70,14 @@
 }
 
 .grid-row {
+    width: 100%;
+}
+
+.grid-row-inner {
     flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .grid-slot-icon {

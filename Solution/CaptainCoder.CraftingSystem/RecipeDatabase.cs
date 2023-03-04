@@ -18,10 +18,20 @@ public class RecipeDatabase<T>
     /// name="recipe"/>. Otherwise, returns false and the value of <paramref
     /// name="recipe"/> is undefined.
     /// </summary>
-    public bool TryGetRecipe(IEnumerable<T> ingredients, ICraftingCategory category, out IShapelessRecipe<T> recipe)
+    public bool TryGetRecipe(IEnumerable<T> ingredients, ICraftingCategory category, out IShapelessRecipe<T>? recipe)
     {
         RecipeEntry key = new RecipeEntry(ingredients, category);
         return _database.TryGetValue(key, out recipe);
+    }
+
+    public bool TryGetRecipe(IEnumerable<T> ingredients, ICraftingContainer<T> container, out IShapelessRecipe<T>? recipe)
+    {
+        foreach (ICraftingCategory category in container.Categories)
+        {
+            if (TryGetRecipe(ingredients, category, out recipe)) { return true; }
+        }
+        recipe = null;
+        return false;
     }
 
     public class RecipeEntry
