@@ -1,0 +1,16 @@
+{
+    "name": "Playground",
+    "rootNamespace": "",
+    "references": [
+        "GUID:a544513d19c5cd744b0d200d6d031eee"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

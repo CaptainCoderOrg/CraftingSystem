@@ -13,7 +13,6 @@ public class CraftingContainerUIController : MonoBehaviour
     public ItemDatabase Database { get; private set; }
     public List<CraftingContainerSlot> InputGridSlots = new();
     public List<CraftingResultSlot> OutputGridSlots = new();
-    private List<GridRow> _rows = new ();
     private VisualElement _root;
     private VisualElement _slotContainer;
     private VisualElement _slotContainerParent;
@@ -21,16 +20,17 @@ public class CraftingContainerUIController : MonoBehaviour
     private static bool _isDragging;
     private static CraftingContainerSlot _originalSlot;
 
+    public void SetCraftingContainer(CraftingContainerData<ItemData> toSet)
+    {
+        _craftingContainer = toSet;
+        BuildContainerGrid();
+    }
 
     private void Awake()
     {
         _root = GetComponent<UIDocument>().rootVisualElement;
-        // _root.style.opacity = 0;
         _slotContainer = _root.Q<VisualElement>("SlotContainer");
-        _slotContainerParent = _root.Q<VisualElement>("SlotContainerParent");
-
-        // m_SlotContainer.style.scale = new Scale(new Vector2(.5f, .5f));
-        
+        _slotContainerParent = _root.Q<VisualElement>("SlotContainerParent");        
         var header = _root.Q<Label>("Header");
         header.text = CraftingContainer.Name;
         _ghostIcon = _root.Q<VisualElement>("GhostIcon");
@@ -39,29 +39,6 @@ public class CraftingContainerUIController : MonoBehaviour
         BuildOutputGrid();
         var combineButton = _root.Q<Button>("CombineButton");
         combineButton.clicked += AttemptCombine;
-        Debug.Log($"On Away: Row Width: {_rows[0].Inner.Width}");
-        // StartCoroutine(ShowWidth());
-    }
-
-    public IEnumerator ShowWidth()
-    {
-        yield return new WaitForEndOfFrame();
-        ScaleGridToFit();
-    }
-
-    private void ScaleGridToFit()
-    {
-        float targetWidth = _slotContainerParent.resolvedStyle.width;
-        float targetHeight = _slotContainerParent.resolvedStyle.height;
-        float rowWidth =_rows[0].Inner.Width;
-        float rowsHeight = _rows.Select(r => r.Height).Sum();
-
-        float widthScale = targetWidth/rowWidth;
-        float heightScale = targetHeight/rowsHeight;
-        Scale scale = new Scale(new Vector2(widthScale, heightScale));
-        _slotContainer.style.scale = scale;
-        _ghostIcon.style.scale = scale;
-        _root.style.opacity = 1;
     }
 
     private void AttemptCombine()
@@ -99,11 +76,12 @@ public class CraftingContainerUIController : MonoBehaviour
 
     private void BuildContainerGrid()
     {
+        _slotContainer.Clear();
+        InputGridSlots.Clear();
         HashSet<CaptainCoder.Core.Position> invalidPositions = CraftingContainer.InvalidPositions;
         for (int r = 0; r < CraftingContainer.Rows; r++)
         {
             GridRow row = new();
-            _rows.Add(row);
             _slotContainer.Add(row);
             for (int c = 0; c < CraftingContainer.Columns; c++)
             {
