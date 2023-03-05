@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Scripting;
 using UnityEngine.UIElements;
 using Position = CaptainCoder.Core.Position;
 
@@ -9,6 +10,15 @@ public class CraftingContainerSlot : VisualElement
 
     public Position Position { get; private set; }
     private ICraftingContainer<ItemData> _container;
+    public CraftingContainerSlot() 
+    {
+        Position = (0,0);
+        _container = new CraftingContainer<ItemData>("Workbench", 4, 4, new CraftingCategory("Wood"));
+        Icon = new Image();
+        Icon.AddToClassList("grid-slot-icon");
+        AddToClassList("grid-slot-container-valid");
+        AddToClassList("grid-slot-container");
+    }
     public CraftingContainerSlot(Position position, ICraftingContainer<ItemData> container, bool isInvalid = false)
     {
         Position = position;
@@ -41,7 +51,7 @@ public class CraftingContainerSlot : VisualElement
     public bool SetItem(ItemData item)
     {
         if (IsInvalid) { return false; }
-        if (!_container.TryAddItem(Position, item)) { return false; } 
+        if (!_container.TryAddItem(Position, item)) { return false; }
         Icon.image = item.Sprite.texture;
         return true;
     }
@@ -60,4 +70,11 @@ public class CraftingContainerSlot : VisualElement
         Icon.image = null;
         CraftingContainerUIController.StartDrag(evt.position, this);
     }
+
+    #region UXML
+    [Preserve]
+    public new class UxmlFactory : UxmlFactory<CraftingContainerSlot, UxmlTraits> { }
+    [Preserve]
+    public new class UxmlTraits : VisualElement.UxmlTraits { }
+    #endregion
 }

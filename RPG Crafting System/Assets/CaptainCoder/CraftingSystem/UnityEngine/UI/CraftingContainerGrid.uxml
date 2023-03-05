@@ -3,8 +3,10 @@
     <ui:VisualElement name="Container" class="container">
         <ui:VisualElement name="Grid" class="grid">
             <ui:Label tabindex="-1" text="Crafting" display-tooltip-when-elided="true" name="Header" class="header" />
-            <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row;">
-                <ui:VisualElement name="SlotContainer" class="slot-container" style="flex-direction: row;" />
+            <ui:VisualElement name="ContainerParent" class="container-parent">
+                <ui:VisualElement name="SlotContainerParent" class="slot-container-parent">
+                    <ui:VisualElement name="SlotContainer" class="slot-container" />
+                </ui:VisualElement>
                 <ui:VisualElement name="CombineOutput" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-shrink: 0; max-width: 128px; min-width: 128px; width: 128px; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;" />
             </ui:VisualElement>
             <ui:Button text="Combine" display-tooltip-when-elided="true" name="CombineButton" style="font-size: 24px;" />

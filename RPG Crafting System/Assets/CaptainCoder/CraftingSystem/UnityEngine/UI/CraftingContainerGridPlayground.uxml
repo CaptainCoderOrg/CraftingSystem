@@ -1,0 +1,57 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/CaptainCoder/CraftingSystem/UnityEngine/UI/CraftingContainerGrid.uss?fileID=7433441132597879392&amp;guid=a90b203a5ae707949bc0c1cb237b6b8e&amp;type=3#CraftingContainerGrid" />
+    <ui:VisualElement name="Container" class="container">
+        <ui:VisualElement name="Grid" class="grid">
+            <ui:Label tabindex="-1" text="Crafting" display-tooltip-when-elided="true" name="Header" class="header" />
+            <ui:VisualElement name="ContainerParent" class="container-parent">
+                <ui:VisualElement name="SlotContainerParent" class="slot-container-parent">
+                    <ui:VisualElement name="SlotContainer" class="slot-container">
+                        <ui:VisualElement name="GridRow" class="grid-row">
+                            <ui:VisualElement name="Inner" class="grid-row-inner">
+                                <CraftingContainerSlot />
+                                <CraftingContainerSlot />
+                                <CraftingContainerSlot />
+                                <CraftingContainerSlot />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="GridRow" class="grid-row" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                            <ui:VisualElement name="Inner" class="grid-row-inner" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                                <CraftingContainerSlot />
+                                <CraftingContainerSlot />
+                                <CraftingContainerSlot />
+                                <CraftingContainerSlot />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="GridRow" class="grid-row" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                            <ui:VisualElement name="Inner" class="grid-row-inner" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                                <CraftingContainerSlot />
+                                <CraftingContainerSlot />
+                                <CraftingContainerSlot />
+                                <CraftingContainerSlot />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="GridRow" class="grid-row" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                            <ui:VisualElement name="Inner" class="grid-row-inner" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                                <CraftingContainerSlot />
+                                <CraftingContainerSlot />
+                                <CraftingContainerSlot />
+                                <CraftingContainerSlot />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="GridRow" class="grid-row" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                            <ui:VisualElement name="Inner" class="grid-row-inner" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                                <CraftingContainerSlot />
+                                <CraftingContainerSlot />
+                                <CraftingContainerSlot />
+                                <CraftingContainerSlot />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="CombineOutput" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-shrink: 0; max-width: 128px; min-width: 128px; width: 128px; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;" />
+            </ui:VisualElement>
+            <ui:Button text="Combine" display-tooltip-when-elided="true" name="CombineButton" style="font-size: 24px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="GhostIcon" class="ghost-icon" />
+    </ui:VisualElement>
+</ui:UXML>
