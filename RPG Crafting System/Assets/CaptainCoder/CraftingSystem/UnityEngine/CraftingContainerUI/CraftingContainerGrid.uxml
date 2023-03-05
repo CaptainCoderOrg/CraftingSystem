@@ -9,7 +9,10 @@
                 </ui:VisualElement>
                 <ui:VisualElement name="CombineOutput" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-shrink: 0; max-width: 128px; min-width: 128px; width: 128px; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;" />
             </ui:VisualElement>
-            <ui:Button text="Combine" display-tooltip-when-elided="true" name="CombineButton" style="font-size: 24px;" />
+            <ui:VisualElement name="VisualElement" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-direction: row;">
+                <ui:Button text="Combine" display-tooltip-when-elided="true" name="CombineButton" style="font-size: 24px;" />
+                <ui:Button text="Clear" display-tooltip-when-elided="true" name="ClearButton" style="font-size: 24px;" />
+            </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="GhostIcon" class="ghost-icon" />
     </ui:VisualElement>

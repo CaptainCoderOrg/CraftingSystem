@@ -39,6 +39,11 @@ public class CraftingContainerUIController : MonoBehaviour
         BuildOutputGrid();
         var combineButton = _root.Q<Button>("CombineButton");
         combineButton.clicked += AttemptCombine;
+        var clearButton = _root.Q<Button>("ClearButton");
+        clearButton.clicked += () => {
+            _craftingContainer.CraftingContainer.Clear();
+            ForceUpdate();
+        };
     }
 
     private void AttemptCombine()
@@ -90,11 +95,6 @@ public class CraftingContainerUIController : MonoBehaviour
                 row.Inner.Add(slot);
             }
         }
-        CraftingContainer.TryAddItem((0, 1), Database.Wood);
-        CraftingContainer.TryAddItem((0, 2), Database.Wood);
-        // CraftingContainer.TryAddItem((1, 1), Database.Wood);
-        CraftingContainer.TryAddItem((2, 1), Database.Rope);
-        // CraftingContainer.TryAddItem((2, 1), Database.Boat);
         ForceUpdate();
 
 
@@ -102,7 +102,7 @@ public class CraftingContainerUIController : MonoBehaviour
         _ghostIcon.RegisterCallback<PointerUpEvent>(OnPointerUp);
     }
 
-    private void ForceUpdate()
+    public void ForceUpdate()
     {
         foreach (CraftingContainerSlot slot in InputGridSlots)
         {

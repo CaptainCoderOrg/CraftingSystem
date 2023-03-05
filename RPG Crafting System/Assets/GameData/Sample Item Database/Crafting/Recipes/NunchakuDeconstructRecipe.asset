@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 27d18e5e16a58c74baca0be7239c054c, type: 3}
-  m_Name: NunchakuRecipe 1
+  m_Name: NunchakuDeconstructRecipe
   m_EditorClassIdentifier: 
   <Ingredients>k__BackingField:
+  - {fileID: 11400000, guid: cb441eede0e59ca4a9f304478015dd94, type: 2}
+  <Category>k__BackingField: {fileID: 11400000, guid: 8907f4e916af95344860a13d99e4320f, type: 2}
+  <Results>k__BackingField:
   - {fileID: 11400000, guid: e8c594e2d3306744086446b70c5b87ce, type: 2}
   - {fileID: 11400000, guid: e8c594e2d3306744086446b70c5b87ce, type: 2}
   - {fileID: 11400000, guid: fab854202c21a1e4c99015bdc8194df8, type: 2}
-  <Category>k__BackingField: {fileID: 11400000, guid: 72081451fd4f8ef4cb05ac2fad452f0a, type: 2}
-  <Results>k__BackingField:
-  - {fileID: 11400000, guid: cb441eede0e59ca4a9f304478015dd94, type: 2}

@@ -280,6 +280,74 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e06562ced368ce64a8f72666f0996aab, type: 2}
   - {fileID: 11400000, guid: e04d87f40edf8a4418a94674a42cc861, type: 2}
   - {fileID: 11400000, guid: 6a2e29f624536cb4eb0df703acee6c3c, type: 2}
+  - {fileID: 11400000, guid: 622778840335f29438831b9a61e7cf91, type: 2}
+  _craftingController: {fileID: 1845251281}
+--- !u!1 &1723535194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1723535197}
+  - component: {fileID: 1723535196}
+  - component: {fileID: 1723535198}
+  m_Layer: 5
+  m_Name: Fake Inventory UI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1723535196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723535194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PanelSettings: {fileID: 11400000, guid: 6d2380e4b271a674ebd9749dbca9614c, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: 964c0ecd6f392a24fb367fe2b694143a, type: 3}
+  m_SortingOrder: 0
+--- !u!4 &1723535197
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723535194}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1723535198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723535194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f10c5b866e27943aaa717b30f854c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _items:
+  - {fileID: 11400000, guid: 720fe89a948fdcb4f8ae462e9ec6f51d, type: 2}
+  - {fileID: 11400000, guid: cb441eede0e59ca4a9f304478015dd94, type: 2}
+  - {fileID: 11400000, guid: fab854202c21a1e4c99015bdc8194df8, type: 2}
+  - {fileID: 11400000, guid: e8c594e2d3306744086446b70c5b87ce, type: 2}
   _craftingController: {fileID: 1845251281}
 --- !u!1 &1845251278
 GameObject:
