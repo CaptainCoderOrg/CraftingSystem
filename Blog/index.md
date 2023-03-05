@@ -70,5 +70,17 @@ with both valid and invalid positions.
 * [Read More]({% link pages/05-day-5.md %})
 * [Watch On YouTube](https://youtube.com/live/ifZe8YSKH_Y)
 
+## Day 6: Combining Items in the UI
+{: .no_toc }
+
+Today we updated the Grid Container UI to contain locations for resulting
+combined items to be displayed as well as add a button for combining.
+Additionally, we wired up the UI to the Crafting System implementation from the
+first 3 days of work. Lastly, we implemented a simple algorithm to scan assets
+to generate the RecipeData ScriptableObject.
+
+* [Read More]({% link pages/06-day-6.md %})
+* [Watch On YouTube](https://youtube.com/live/4rftUYNikr8)
+
 
 {% include Links.md %}
