@@ -19,10 +19,12 @@ public class CraftingContainerUIController : MonoBehaviour
     private static VisualElement _ghostIcon;
     private static bool _isDragging;
     private static CraftingContainerSlot _originalSlot;
+    private Label _header;
 
     public void SetCraftingContainer(CraftingContainerData<ItemData> toSet)
     {
         _craftingContainer = toSet;
+        _header.text = CraftingContainer.Name;
         BuildContainerGrid();
     }
 
@@ -31,8 +33,8 @@ public class CraftingContainerUIController : MonoBehaviour
         _root = GetComponent<UIDocument>().rootVisualElement;
         _slotContainer = _root.Q<VisualElement>("SlotContainer");
         _slotContainerParent = _root.Q<VisualElement>("SlotContainerParent");        
-        var header = _root.Q<Label>("Header");
-        header.text = CraftingContainer.Name;
+        _header = _root.Q<Label>("Header");
+        _header.text = CraftingContainer.Name;
         _ghostIcon = _root.Q<VisualElement>("GhostIcon");
 
         BuildContainerGrid();

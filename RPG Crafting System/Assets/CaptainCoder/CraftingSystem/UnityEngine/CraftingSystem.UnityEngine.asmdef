@@ -1,16 +1,14 @@
 {
     "name": "CraftingSystem.UnityEngine",
     "rootNamespace": "CaptainCoder.CraftingSystem.UnityEngine",
-    "references": [
-        "GUID:b99966b0af10a584991c56aa68773f45"
-    ],
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": true,
     "precompiledReferences": [
         "CaptainCoder.CraftingSystem.dll",
-        "CaptainCoder.Core.dll"
+        "CaptainCoder.dll"
     ],
     "autoReferenced": true,
     "defineConstraints": [],
