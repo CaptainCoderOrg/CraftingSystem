@@ -11,8 +11,9 @@ nav_order: 0
 
 Hello coders! Captain Coder here with another learning series. On the Captain
 Coder's Academy discord, it was proposed that I implement a crafting system live
-on stream. This site will (hopefully) serve to chronicle the streams for anyone
-who missed them / wants to catch up.
+on stream. This site serves as a blog that chronicles the streams for anyone who
+missed them live and recaps what we completed and learned each day. I hope someone
+finds this blog useful!
 
 * Archived Streams Playlist: [Playlist]
 * Catch the Captain Live on Twitch: [Twitch]
@@ -82,5 +83,15 @@ to generate the RecipeData ScriptableObject.
 * [Read More]({% link pages/06-day-6.md %})
 * [Watch On YouTube](https://youtube.com/live/4rftUYNikr8)
 
+## Day 7: UI Cleanup
+
+Today was the final day working on v0 of our Crafting System. We updated the
+restyled the crafting container UI to scale with the size of the underlying
+grid, added buttons to switch between crafting container types, and added a
+simple item menu to allow the user to add and remove items in the crafting
+container.
+
+* [Read More]({% link pages/07-day-7.md %})
+* [Watch On YouTube](https://youtube.com/live/610k0-rCQuU)
 
 {% include Links.md %}
